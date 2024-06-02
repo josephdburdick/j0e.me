@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import colors from "tailwindcss/colors";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: ["class"],
@@ -19,6 +20,25 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ["Bebas Neue", ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        "heading-xs": [
+          "clamp(1.5rem, 4vw + 1rem, 4rem)",
+          { lineHeight: "1.1" },
+        ],
+        "heading-sm": [
+          "clamp(2rem, 5vw + 1.5rem, 5rem)",
+          { lineHeight: "1.1" },
+        ],
+        "heading-md": ["clamp(3rem, 6vw + 2rem, 6rem)", { lineHeight: "1.1" }],
+        "heading-lg": [
+          "clamp(4rem, 7vw + 2.5rem, 7rem)",
+          { lineHeight: "1.1" },
+        ],
+        "heading-xl": ["clamp(5rem, 8vw + 3rem, 8rem)", { lineHeight: "1.1" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
