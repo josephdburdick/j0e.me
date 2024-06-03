@@ -1,6 +1,6 @@
-import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
-import defaultTheme from "tailwindcss/defaultTheme";
+import type { Config } from "tailwindcss"
+import colors from "tailwindcss/colors"
+import defaultTheme from "tailwindcss/defaultTheme"
 
 const config = {
   darkMode: ["class"],
@@ -24,20 +24,12 @@ const config = {
         heading: ["Bebas Neue", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        "heading-xs": [
-          "clamp(1.5rem, 4vw + 1rem, 4rem)",
-          { lineHeight: "1.1" },
-        ],
-        "heading-sm": [
-          "clamp(2rem, 5vw + 1.5rem, 5rem)",
-          { lineHeight: "1.1" },
-        ],
-        "heading-md": ["clamp(3rem, 6vw + 2rem, 6rem)", { lineHeight: "1.1" }],
-        "heading-lg": [
-          "clamp(4rem, 7vw + 2.5rem, 7rem)",
-          { lineHeight: "1.1" },
-        ],
-        "heading-xl": ["clamp(5rem, 8vw + 3rem, 8rem)", { lineHeight: "1.1" }],
+        "heading-xs": ["clamp(1rem, 1.5vw + 0.5rem, 1.5rem)", {}],
+        "heading-sm": ["clamp(1.25rem, 2vw + 0.75rem, 2rem)", {}],
+        "heading-md": ["clamp(1.5rem, 2.5vw + 1rem, 2.5rem)", {}],
+        "heading-lg": ["clamp(1.75rem, 3vw + 1.25rem, 3rem)", {}],
+        "heading-xl": ["clamp(2rem, 3.5vw + 1.5rem, 3.5rem)", {}],
+        body: ["clamp(0.875rem, 1vw + 0.5rem, 1.5rem)", {}],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -97,6 +89,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config

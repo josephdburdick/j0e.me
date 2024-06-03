@@ -4,27 +4,39 @@ import MainHeader from "@/components/MainHeader"
 function DesktopContent() {
   return (
     <div className="flex flex-1 w-full container">
-      <div className="grid md:grid-cols-12 gap-4">
-        <aside className="flex flex-col flex-1 lg:col-span-4 gap-4 lg:gap-16">
-          <section className="flex flex-col flex-1 gap-4 lg:gap-8">
+      <div className="grid  gap-4">
+        <aside className="flex flex-col gap-4 lg:gap-16">
+          <section className="flex flex-col gap-4 lg:gap-8">
             <div className="flex gap-4 items-center">
               <MainAvatar />
               <MainHeader />
             </div>
           </section>
-          <section>
+          <section className="text-body space-y-8">
             <p>
               With over 2 decades of experience, I assist companies grow their
               product with users in mind through strategic and creative
               solutions.
             </p>
-            <p>Reach out at josephdburdick@gmail.com</p>
+            <p>
+              Reach out at{" "}
+              <a href="mailto:josephdburdick@gmail.com">
+                josephdburdick@gmail.com
+              </a>
+            </p>
           </section>
         </aside>
-        <main className="md:col-span-8">
-          {Array.from({ length: 10 }).map((_, i) => (
-            <div key={i}>{i}</div>
-          ))}
+        <main>
+          <section>
+            <h3>Skills</h3>
+          </section>
+
+          <section>
+            <h3>Contributions</h3>
+          </section>
+          <section>
+            <h3>Reviews</h3>
+          </section>
         </main>
       </div>
     </div>
