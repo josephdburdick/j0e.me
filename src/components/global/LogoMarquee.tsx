@@ -1,11 +1,11 @@
 import { useData } from "@/lib/providers/DataProvider"
 import { cn } from "@/lib/utils"
 import { Job } from "@/lib/types/experience"
+
 type MarqueeProps = {
   itemWidth?: string;
 };
 
-const logoPath = "/j0e/assets/images/logos/"
 export default function LogoMarquee(props: MarqueeProps) {
   const { itemWidth = "200px" } = props
   const { data } = useData()
@@ -30,7 +30,7 @@ export default function LogoMarquee(props: MarqueeProps) {
         >
           <div className="w-full h-full flex items-center justify-center text-muted p-8 ">
             <img
-              src={logoPath + job.logo}
+              src={job.logo}
               alt={`${job.company} logo`}
               className="grayscale pointer-events-none selection-none max-h-20 max-w-28"
             />
