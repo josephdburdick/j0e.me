@@ -1,5 +1,6 @@
 import { useData } from "@/lib/providers/DataProvider"
 import { cn } from "@/lib/utils"
+import { Job } from "@/lib/types/experience"
 type MarqueeProps = {
   itemWidth?: string;
 };
@@ -8,8 +9,8 @@ const logoPath = "/j0e/assets/images/logos/"
 export default function LogoMarquee(props: MarqueeProps) {
   const { itemWidth = "200px" } = props
   const { data } = useData()
-  const jobs = data.experience.attributes.experience.filter(
-    (job) => !!job.logo,
+  const jobs: Job[] = data.experience.attributes.experience.filter(
+    (job: Job) => !!job.logo,
   )
 
   return (
