@@ -1,8 +1,8 @@
 import { Avatar, AvatarFallback } from "./ui/avatar"
 import Image from "next/image"
-import { useData } from "@/lib/providers/DataProvider"
+import { useApi } from "@/lib/providers/DataProvider"
 const MainAvatar = () => {
-  const { data } = useData()
+  const { data } = useApi()
   const initials = data.profile.attributes.name
     .split(" ")
     .map((n: string) => n[0])

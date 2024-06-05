@@ -1,4 +1,4 @@
-import { useData } from "@/lib/providers/DataProvider"
+import { useApi } from "@/lib/providers/DataProvider"
 import { Job } from "@/lib/types"
 import { cn } from "@/lib/utils"
 
@@ -8,7 +8,7 @@ type MarqueeProps = {
 
 export default function LogoMarquee(props: MarqueeProps) {
   const { itemWidth = "200px" } = props
-  const { data } = useData()
+  const { data } = useApi()
   const jobs: Job[] = data.experience.attributes.experience.filter(
     (job: Job) => !!job.logo,
   )

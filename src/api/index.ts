@@ -18,7 +18,7 @@ interface Result {
 }
 const searchRegex = /\$\{basePath\}/gi
 
-export async function getData(): Promise<Result> {
+export async function api(): Promise<Result> {
   const dataDir = path.join(process.cwd(), "src/api/")
   const files = await fs.readdir(dataDir)
 
@@ -47,4 +47,4 @@ export async function getData(): Promise<Result> {
   return parsedResult
 }
 
-export default getData
+export default api

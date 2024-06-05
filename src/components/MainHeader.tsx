@@ -1,7 +1,7 @@
-import { useData } from "@/lib/providers/DataProvider"
+import { useApi } from "@/lib/providers/DataProvider"
 
 const NameHeader = () => {
-  const { data } = useData()
+  const { data } = useApi()
   const { name, title } = data.profile.attributes
 
   return (

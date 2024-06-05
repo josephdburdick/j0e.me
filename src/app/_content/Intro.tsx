@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useData } from "@/lib/providers/DataProvider"
+import { useApi } from "@/lib/providers/DataProvider"
 import WorkAvailability from "@/components/global/WorkAvailability"
 import ContactLinks from "@/components/global/ContactLinks"
 import LogoMarquee from "@/components/global/LogoMarquee"
@@ -9,7 +9,7 @@ import { ContactLink } from "@/lib/types"
 import MobileNav from "@/components/global/MobileNav"
 
 function Intro() {
-  const { data } = useData()
+  const { data } = useApi()
   const { logo } = data.site.attributes
 
   const links: ContactLink[] = Object.values(data.profile.attributes.links)

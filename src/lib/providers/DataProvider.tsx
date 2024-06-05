@@ -27,10 +27,10 @@ export const DataProvider: React.FC<DataProviderProps> = ({
   )
 }
 
-export const useData = () => {
+export const useApi = () => {
   const context = useContext(DataContext)
   if (context === undefined) {
-    throw new Error("useData must be used within a DataProvider")
+    throw new Error("useApi must be used within a DataProvider")
   }
   return context
 }
