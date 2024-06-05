@@ -17,6 +17,7 @@ interface Result {
   [key: string]: FrontMatterContent;
 }
 const searchRegex = /\$\{basePath\}/gi
+
 export async function getData(): Promise<Result> {
   const dataDir = path.join(process.cwd(), "src/api/")
   const files = await fs.readdir(dataDir)
