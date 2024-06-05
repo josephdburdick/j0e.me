@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <DataProvider initialData={data}>
       <DeviceProvider>
-        <div className="flex min-h-screen flex-col items-center justify-center ">
+        <div className="flex min-h-[100dvh] flex-col items-center justify-center ">
           <Intro />
         </div>
       </DeviceProvider>
