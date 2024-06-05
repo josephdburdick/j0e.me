@@ -17,7 +17,7 @@ links:
     label: "LinkedIn"
   readcv:
     url: "https://read.cv/josephdburdick"
-    label: "read.cv"
+    label: "Read.cv"
 intro: >
   j0e.me is the eponymous online home of Joe Burdick— web designer, software engineer, leader, and photographer.
 ---
