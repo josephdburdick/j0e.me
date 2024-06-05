@@ -9,15 +9,15 @@ links:
   email:
     url: "mailto:josephdburdick@gmail.com"
     label: "Email"
-  github:
-    url: "https://github.com/josephdburdick"
-    label: "Github"
   linkedin:
     url: "https://linkedin.com/in/josephdburdick"
     label: "LinkedIn"
   readcv:
     url: "https://read.cv/josephdburdick"
     label: "Read.cv"
+  github:
+    url: "https://github.com/josephdburdick"
+    label: "Github"
 intro: >
   j0e.me is the eponymous online home of Joe Burdick— web designer, software engineer, leader, and photographer.
 ---
