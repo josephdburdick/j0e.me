@@ -1,7 +1,9 @@
 import { useData } from "@/lib/providers/DataProvider"
+
 const NameHeader = () => {
   const { data } = useData()
-  const { name, title } = data
+  const { name, title } = data.profile.attributes
+
   return (
     <div>
       <h1 className="text-3xl">{name}</h1>
