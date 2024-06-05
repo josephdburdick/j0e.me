@@ -21,3 +21,10 @@ export interface Job {
   visible?: boolean;
   roles: Role[];
 }
+
+export type FavIcon = {
+  href: string;
+  rel: string;
+  sizes: string;
+  type?: string;
+};

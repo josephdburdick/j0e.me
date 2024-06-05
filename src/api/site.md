@@ -1,7 +1,7 @@
 ---
-title: "Joe Burdick | Web Software Engineer"
 name: "Joe Burdick"
 url: "j0e.me"
+
 logo:
   url: "${basePath}/assets/images/logo--solid.svg"
   width: 100
