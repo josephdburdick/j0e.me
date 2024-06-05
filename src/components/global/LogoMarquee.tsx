@@ -1,6 +1,6 @@
 import { useData } from "@/lib/providers/DataProvider"
+import { Job } from "@/lib/types"
 import { cn } from "@/lib/utils"
-import { Job } from "@/lib/types/experience"
 
 type MarqueeProps = {
   itemWidth?: string;
