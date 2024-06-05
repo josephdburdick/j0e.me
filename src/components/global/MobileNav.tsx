@@ -1,5 +1,5 @@
-"use client";
-import { buttonVariants, Button } from "@/components/ui/button";
+"use client"
+import { buttonVariants, Button } from "@/components/ui/button"
 import {
   Drawer,
   DrawerClose,
@@ -9,18 +9,18 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer";
+} from "@/components/ui/drawer"
 
-import { ContactLink } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import { ContactLink } from "@/lib/types"
+import { cn } from "@/lib/utils"
 
 type Props = {
-  className?: string;
-  links: ContactLink[];
-};
+  className?: string
+  links: ContactLink[]
+}
 
 export default function MobileNav(props: Props) {
-  const { className = "", links: linksProp = [] } = props;
+  const { className = "", links: linksProp = [] } = props
 
   const links = linksProp.map(({ url, label }, index: number) => (
     <li key={index}>
@@ -30,13 +30,13 @@ export default function MobileNav(props: Props) {
         rel="noreferrer"
         className={cn(
           buttonVariants({ variant: "default", size: "lg" }),
-          "w-full text-lg",
+          "w-full text-lg"
         )}
       >
         {label}
       </a>
     </li>
-  ));
+  ))
 
   return (
     <Drawer>
@@ -84,5 +84,5 @@ export default function MobileNav(props: Props) {
         </div>
       </DrawerContent>
     </Drawer>
-  );
+  )
 }
