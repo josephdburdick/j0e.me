@@ -14,13 +14,10 @@ export default function LogoMarquee(props: MarqueeProps) {
   )
 
   return (
-    <div className="marquee-wrapper relative w-11/12 max-w-screen-xl mx-auto mt-20 h-24 overflow-hidden">
+    <div className="marquee-wrapper relative w-11/12 max-w-screen-xl mx-auto  h-36 overflow-hidden pointer-events-none">
       {jobs.map((job, index) => (
         <div
-          className={cn(
-            "marquee-item absolute w-52 h-24 bg-secondary rounded-lg",
-            `marquee-item-${index}`,
-          )}
+          className={cn("absolute w-52 h-24 rounded-lg shadow-xl my-4 ")}
           key={index}
           style={{
             animationDelay: `calc(30s / 8 * (8 - ${index + 1}) * -1)`,
@@ -31,11 +28,11 @@ export default function LogoMarquee(props: MarqueeProps) {
             left: `max(calc(${itemWidth} * ${jobs.length}), 100%)`,
           }}
         >
-          <div className="w-full h-full flex items-center justify-center text-muted p-8 pointer-events-none selection-none">
+          <div className="w-full h-full flex items-center justify-center text-muted p-8 ">
             <img
               src={logoPath + job.logo}
               alt={`${job.company} logo`}
-              className="grayscale pointer-events-none selection-none"
+              className="grayscale pointer-events-none selection-none max-h-20 max-w-28"
             />
           </div>
         </div>
