@@ -2,7 +2,7 @@
 experience:
   - company: "Unqork"
     location: "New York, New York, United States · Remote"
-    logo: "unqork.svg"
+    logo: "${basePath}/assets/images/logos/unqork.svg"
     roles:
       - title: "Senior Software Engineer"
         type: "Full-time"
@@ -92,7 +92,7 @@ experience:
             "Web Standards",
           ]
   - company: "Adoptive"
-    logo: "adoptive.jpg"
+    logo: "${basePath}/assets/images/logos/adoptive.jpg"
     location: "New York, NY · Remote"
     roles:
       - title: "Designer/Developer"
@@ -112,7 +112,7 @@ experience:
           Led the deployment of the Yale School of Medicine website, utilizing a tech stack that included Gulp, Webpack, React, and PostCSS, alongside aiding in the integration with .NET back-end technologies.
         skills: ["React.js", "Communication", "JavaScript", "Web Standards"]
   - company: "Studiografica"
-    logo: "sgc.svg"
+    logo: "${basePath}/assets/images/logos/sgc.svg"
     location: "SoHo, New York City · On-site"
     roles:
       - title: "UX, Tech Director, Lead Front-end Designer / Developer"
@@ -132,7 +132,7 @@ experience:
           Worked with high-profile brands such as Ciroc Vodka, Macy’s, Casio, W.W. Glass, and David’s Bridal, as well as the Venture Development Center, contributing significantly to both client-facing and internal projects.
         skills: ["Communication", "JavaScript", "Web Standards"]
   - company: "OurWeddingDay / David's Bridal"
-    logo: "davids-bridal.svg"
+    logo: "${basePath}/assets/images/logos/davids-bridal.svg"
     location: "Midtown, New York City"
     roles:
       - title: "Senior Designer / Front-end Web Developer"
@@ -148,7 +148,7 @@ experience:
           Managed the relationship with an outsourced back-end development firm until late 2009. This collaboration continued until the company broadened its focus and created specialized roles for designers and developers.
         skills: ["Communication", "JavaScript", "Web Standards"]
   - company: "Aquent"
-    logo: "aquent.svg"
+    logo: "${basePath}/assets/images/logos/aquent.svg"
     roles:
       - title: "Designer / Front-end Web Developer"
         type: "Full-time"
@@ -156,7 +156,7 @@ experience:
         end_date: "2008-10-01"
         duration: "1 yr 10 mos"
   - company: "TMP Worldwide"
-    logo: "tmp.svg"
+    logo: "${basePath}/assets/images/logos/tmp.svg"
     roles:
       - title: "Designer"
         type: "Full-time"
@@ -166,7 +166,7 @@ experience:
         description: >
           Assisted Creative Director and Art Director on an advertising campaign spanning web and print media for the Department of Defense Missile Defense Agency.
   - company: "National Crime Prevention Council"
-    logo: "ncpc.png"
+    logo: "${basePath}/assets/images/logos/ncpc.png"
     roles:
       - title: "Public/Media Relations, Program Associate"
         type: "Full-time"
@@ -193,7 +193,7 @@ experience:
         description: >
           Developed a high number of highly conceptual email campaign templates for restaurants in the United States and Europe.
   - company: "Virginia Commonwealth University"
-    logo: "vcu.svg"
+    logo: "${basePath}/assets/images/logos/vcu.svg"
     roles:
       - title: "Web Host, Master, & Designer"
         type: "Full-time"
