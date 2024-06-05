@@ -3,8 +3,8 @@ import Image from "next/image"
 import { useData } from "@/lib/providers/DataProvider"
 const MainAvatar = () => {
   const { data } = useData()
-
-  const initials = data.name
+  console.log({ data })
+  const initials = data.profile.attributes.name
     .split(" ")
     .map((n: string) => n[0])
     .join("")

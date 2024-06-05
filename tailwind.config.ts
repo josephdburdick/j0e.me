@@ -1,7 +1,6 @@
-import type { Config } from "tailwindcss"
-import colors from "tailwindcss/colors"
-import defaultTheme from "tailwindcss/defaultTheme"
-
+import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
+import defaultTheme from "tailwindcss/defaultTheme";
 const config = {
   darkMode: ["class"],
   content: [
@@ -14,7 +13,7 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {},
       screens: {
         "2xl": "1400px",
       },
@@ -89,6 +88,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
