@@ -20,7 +20,7 @@ function Intro() {
             alt="Joe Logo"
           />
         </header>
-        <main className="items-center text-heading-md space-y-16 ">
+        <main className="items-center text-heading-md space-y-16 w-full">
           <div
             className="container "
             dangerouslySetInnerHTML={{ __html: data.intro.html }}
@@ -31,7 +31,7 @@ function Intro() {
           className="container
           pb-4 md:pb-8 lg:pb-16 xl:pb-24"
         >
-          <div className="flex items-center gap-4 justify-between">
+          <div className="flex items-end md:items-center gap-4 justify-between">
             <WorkAvailability />
             <ContactLinks />
           </div>

@@ -10,15 +10,18 @@ export default function ContactLinks() {
   const links = Object.values(contactLinks)
     .filter(({ label }) => !filter.includes(label))
     .map(({ url, label }, index: number) => (
-      <li key={index}>
+      <li key={index} className="text-right md:text-left">
         <a href={url} target="_blank" rel="noreferrer">
           {label}
         </a>
       </li>
     ))
+
   return (
     <nav>
-      <ul className="flex gap-8 items-center">{links}</ul>
+      <ul className="flex gap-4 md:gap-8 flex-col md:flex-row justify-end md:items-center">
+        {links}
+      </ul>
     </nav>
   )
 }
