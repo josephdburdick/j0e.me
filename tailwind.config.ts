@@ -18,9 +18,6 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        heading: ["Bebas Neue", ...defaultTheme.fontFamily.sans],
-      },
       fontSize: {
         "heading-xs": ["clamp(1rem, 1.5vw + 0.5rem, 1.5rem)", {}],
         "heading-sm": ["clamp(1.25rem, 2vw + 0.75rem, 2rem)", {}],
