@@ -1,5 +1,5 @@
-"use client"
-import { buttonVariants, Button } from "@/components/ui/button"
+"use client";
+import { buttonVariants, Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -9,10 +9,10 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer"
+} from "@/components/ui/drawer";
 
-import { ContactLink } from "@/lib/types"
-import { cn } from "@/lib/utils"
+import { ContactLink } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 type Props = {
   className?: string;
@@ -20,7 +20,7 @@ type Props = {
 };
 
 export default function MobileNav(props: Props) {
-  const { className = "", links: linksProp = [] } = props
+  const { className = "", links: linksProp = [] } = props;
 
   const links = linksProp.map(({ url, label }, index: number) => (
     <li key={index}>
@@ -36,7 +36,7 @@ export default function MobileNav(props: Props) {
         {label}
       </a>
     </li>
-  ))
+  ));
 
   return (
     <Drawer>
@@ -47,7 +47,7 @@ export default function MobileNav(props: Props) {
           className="rounded-full text-heading-xs py-4"
         >
           <span className="flex items-center gap-2">
-            Let's Connect
+            Let&apos;s Connect
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -68,7 +68,7 @@ export default function MobileNav(props: Props) {
       <DrawerContent>
         <div className="mx-auto w-full max-w-md">
           <DrawerHeader>
-            <DrawerTitle>Let's connect</DrawerTitle>
+            <DrawerTitle>Let&apos;s connect</DrawerTitle>
             <DrawerDescription>
               Find me on social media or send me an email
             </DrawerDescription>
@@ -84,5 +84,5 @@ export default function MobileNav(props: Props) {
         </div>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }
