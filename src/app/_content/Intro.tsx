@@ -5,10 +5,16 @@ import { useData } from "@/lib/providers/DataProvider"
 import WorkAvailability from "@/components/global/WorkAvailability"
 import ContactLinks from "@/components/global/ContactLinks"
 import LogoMarquee from "@/components/global/LogoMarquee"
+import { ContactLink } from "@/lib/types"
+import MobileNav from "@/components/global/MobileNav"
 
 function Intro() {
   const { data } = useData()
   const { logo } = data.site.attributes
+
+  const links: ContactLink[] = Object.values(data.profile.attributes.links)
+  const filter = ["Email"]
+
   return (
     <div className="flex flex-1 w-full">
       <div className="grid grid-rows-[auto_1fr_auto] gap-4 lg:gap-6 items-center w-full">
@@ -51,8 +57,11 @@ function Intro() {
               </svg>
               <span>{data.profile.attributes.location}</span>
             </div>
-
-            <ContactLinks />
+            <ContactLinks
+              links={links.filter(({ label }) => !filter.includes(label))}
+              className="hidden md:block"
+            />
+            <MobileNav links={links} className="block md:hidden" />
           </div>
         </footer>
       </div>

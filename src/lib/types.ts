@@ -1,3 +1,8 @@
+export type ContactLink = {
+  url: string;
+  label: string;
+};
+
 export interface Role {
   title: string;
   type: string;
