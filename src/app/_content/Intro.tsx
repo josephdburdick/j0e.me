@@ -10,8 +10,8 @@ function Intro() {
   const { data } = useData()
 
   return (
-    <div className="flex flex-1 w-full min-h-[100dvh]">
-      <div className="grid grid-rows-[auto_1fr_auto] gap-4 items-center w-full">
+    <div className="flex flex-1 w-full">
+      <div className="grid grid-rows-[auto_1fr_auto] gap-4 lg:gap-6 items-center w-full">
         <header className="container flex justify-between pt-4 md:pt-8 lg:pt-16 xl:pt-24">
           <Image
             src="/j0e/assets/images/logo--slash.svg"
