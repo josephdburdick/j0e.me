@@ -2,7 +2,7 @@
 education:
   - institution: "Virginia Commonwealth University"
     logo: "https://media.licdn.com/dms/image/C4E0BAQHY-pnQLhvFtQ/company-logo_100_100/0/1630600618760/virginia_commonwealth_university_logo?e=1725494400&v=beta&t=9JX-Sml6gaQSwifkuiUqwAFvQ-XtknCeVxX13sGmaXk"
-    name: "Bachelor of Science, Mass Communications / Creative Advertising / Media Studies / Art Direction"
+    name: "Bachelor of Science, Mass Communications; Creative Advertising / Media Studies / Art Direction"
     start_date: "2002-09-01"
     end_date: "2007-06-01"
     activities: "Ad Club, Linux Users Group, Mass Comm Lab"
