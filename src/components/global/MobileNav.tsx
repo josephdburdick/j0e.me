@@ -15,9 +15,9 @@ import { ContactLink } from "@/lib/types"
 import { cn } from "@/lib/utils"
 
 type Props = {
-  className?: string
-  links: ContactLink[]
-}
+  className?: string;
+  links: ContactLink[];
+};
 
 export default function MobileNav(props: Props) {
   const { className = "", links: linksProp = [] } = props
@@ -30,7 +30,7 @@ export default function MobileNav(props: Props) {
         rel="noreferrer"
         className={cn(
           buttonVariants({ variant: "default", size: "lg" }),
-          "w-full text-lg"
+          "w-full text-lg",
         )}
       >
         {label}
@@ -41,11 +41,7 @@ export default function MobileNav(props: Props) {
   return (
     <Drawer>
       <DrawerTrigger asChild className={className}>
-        <Button
-          variant="outline"
-          size="lg"
-          className="rounded-full text-heading-xs py-4"
-        >
+        <Button variant="outline" size="lg" className="rounded-full py-4">
           <span className="flex items-center gap-2">
             Let&apos;s Connect
             <svg

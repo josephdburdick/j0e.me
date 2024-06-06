@@ -28,3 +28,11 @@ export type FavIcon = {
   sizes: string;
   type?: string;
 };
+
+export type Experience = {
+  company: string;
+  location?: string;
+  logo?: string;
+  visible?: boolean;
+  roles: Role[];
+};

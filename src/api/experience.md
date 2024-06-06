@@ -44,6 +44,9 @@ experience:
             "Node.js",
             "Web Standards",
           ]
+  - company: "Present Day"
+    logo: "${basePath}/assets/images/logos/presentday.svg"
+    roles:
       - title: "Principal Engineer"
         type: "Contract"
         start_date: "2017-04-01"

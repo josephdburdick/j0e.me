@@ -4,7 +4,7 @@ url: "j0e.me"
 
 logo:
   url: "${basePath}/assets/images/logo--solid.svg"
-  width: 100
-  height: 32
+  width: 80
+  height: 26
   alt: "Joe Logo"
 ---
