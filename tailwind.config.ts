@@ -1,8 +1,7 @@
 import type { Config } from "tailwindcss"
 import colors from "tailwindcss/colors"
-import defaultTheme from "tailwindcss/defaultTheme"
 const config = {
-  darkMode: ["class"],
+  darkMode: "media",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",

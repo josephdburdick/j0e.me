@@ -39,7 +39,7 @@ function Intro() {
           <LogoMarquee />
         </main>
         <footer className="container pb-4 md:pb-8 lg:pb-16 xl:pb-24">
-          <div className="flex items-end md:items-center gap-4 justify-between">
+          <div className="flex items-center gap-4 justify-between">
             <div className="hidden sm:flex items-center gap-2 text-muted text-sm md:text-base">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
