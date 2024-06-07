@@ -6,38 +6,64 @@ export default function Experience() {
   const { data } = useApi()
   const experience: ExperienceType[] = data.experience.attributes.experience
 
+  const renderDate = (dateProp: string | null) => {
+    if (!dateProp) return "Now"
+
+    const date = new Date(dateProp)
+    return `
+      ${date.toLocaleString("default", { month: "short" })} 
+      ${date.toLocaleString("default", { year: "numeric" })} 
+
+    `
+  }
   const renderRole = (role: Role, index: number) => (
-    <li key={`role-${index}`}>
-      <time>
-        {role.start_date} &mdash; {role.end_date}
-      </time>
-      <div className="flex gap-4 items-center ">
-        <span>{role.title}</span>
-        <span>{role.type}</span>
+    <li key={`role-${index}`} className="grid-auto-rows grid gap-4">
+      <div className="grid grid-cols-12 items-center">
+        <div className="col-span-12 gap-1 text-xs text-muted md:col-span-3 md:col-start-1 xl:col-span-2">
+          <div className="flex flex-wrap gap-1 lg:justify-start xl:justify-end">
+            <time>{renderDate(role.start_date)}</time>
+            <span>&mdash;</span>
+            <time>{renderDate(role.end_date)}</time>
+          </div>
+        </div>
+        <div className="col-span-12 items-center md:col-span-8 md:col-start-4">
+          <div className="flex gap-2 text-sm">
+            <span>{role.title}</span>
+            <span>{role.type}</span>
+          </div>
+        </div>
       </div>
-      <p>{role.description}</p>
+      <div className="grid grid-cols-12">
+        <div className="col-span-12 md:col-span-9 md:col-start-4">
+          <p>{role.description}</p>
+        </div>
+      </div>
     </li>
   )
   const renderExperience = (experience: ExperienceType, index: number) => (
-    <li key={`experience-${index}`} className="grid gap-8 grid-cols-[auto_1fr]">
-      <div className="font-semibold">{experience.company}</div>
-      <ul className="grid grid-auto-rows gap-4 items-start">
+    <li key={`experience-${index}`} className="grid gap-4">
+      <div className="grid grid-cols-12">
+        <div className="col-span-12 font-semibold md:col-span-8 md:col-start-4">
+          {experience.company}
+        </div>
+      </div>
+      <ul className="grid-auto-rows grid items-start gap-4">
         {experience.roles.map(renderRole)}
       </ul>
     </li>
   )
   const renderExperiences = (
     <div className="container">
-      <ul className="grid grid-auto-rows gap-8 ">
-        {experience.filter((item) => !item.visible).map(renderExperience)}
+      <ul className="grid-auto-rows grid gap-10">
+        {experience.filter((item) => !item.visible).map(renderExperience)}{" "}
       </ul>
     </div>
   )
   return (
-    <div className="bg-secondary flex min-h-[100dvh] flex-col items-center justify-center ">
+    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-secondary pt-4 md:pt-8 lg:pt-16 xl:pt-24">
       {/* <MainHeader />  */}
 
-      <div className="flex flex-1 w-full">{renderExperiences}</div>
+      <div className="flex w-full flex-1">{renderExperiences}</div>
     </div>
   )
 }

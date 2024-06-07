@@ -8,13 +8,9 @@ export default async function Home() {
 
   return (
     <DataProvider initialData={data}>
-      <div className="max-h-[100dvh] snap-y snap-mandatory overflow-y-scroll">
-        <div className="snap-start">
-          <Intro />
-        </div>
-        <div className="snap-start">
-          <Experience />
-        </div>
+      <div className="max-h-[100dvh] ">
+        <Intro />
+        <Experience />
       </div>
     </DataProvider>
   )
