@@ -29,7 +29,7 @@ const DarkModeToggle = () => {
       className="group relative inline-flex items-center rounded-full bg-secondary focus:outline-none dark:bg-gray-800"
       onClick={() => setDarkMode(!darkMode)}
     >
-      <div className="pointer-events-none absolute right-full z-0 mr-2 translate-x-1/4 whitespace-nowrap rounded-full bg-primary px-4 py-2 text-xs opacity-0 transition-all duration-300 group-hover:-translate-x-0 group-hover:opacity-100 group-active:opacity-100">
+      <div className="pointer-events-none absolute right-full z-0 mr-2 translate-x-1/4 whitespace-nowrap rounded-full bg-primary px-4 py-2 opacity-0 transition-all duration-300 group-hover:-translate-x-0 group-hover:opacity-100 group-active:opacity-100">
         Toggle theme
       </div>
       <div

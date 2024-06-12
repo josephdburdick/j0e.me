@@ -30,7 +30,6 @@ function Intro() {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
-
   return (
     <div className="flex min-h-[95dvh] flex-col items-center justify-center">
       <div className="flex w-full flex-1">
@@ -40,7 +39,7 @@ function Intro() {
           </MainHeader>
           <div
             className={cn(
-              "fixed top-0 w-full bg-gradient-to-b from-background mix-blend-normal transition-opacity duration-300 dark:mix-blend-plus-darker",
+              "fixed top-0 w-full bg-gradient-to-b from-background backdrop-blur-sm transition-opacity duration-300 dark:mix-blend-plus-darker dark:backdrop-blur-none",
               isSticky ? "opacity-100" : "opacity-0",
             )}
           >
@@ -64,7 +63,6 @@ function Intro() {
               >
                 <div className="hidden shrink-0 items-center gap-2 text-sm text-muted md:flex md:text-base">
                   <Icon.mapPin />
-                  {/* <span>{data.profile.attributes.location}</span> */}
                   <WeatherComponent />
                 </div>
                 <MainNav
