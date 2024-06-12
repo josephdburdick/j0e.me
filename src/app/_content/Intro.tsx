@@ -1,13 +1,12 @@
 "use client"
 
 import DarkModeToggle from "@/components/global/DarkModeToggle"
+import HeaderAd from "@/components/global/HeaderAd"
 import Icon from "@/components/global/Icon"
 import LogoMarquee from "@/components/global/LogoMarquee"
 import MainHeader from "@/components/global/MainHeader"
 import MainNav from "@/components/global/MainNav"
-import Swap from "@/components/global/Swap"
 import WeatherComponent from "@/components/global/Weather"
-import WorkAvailability from "@/components/global/WorkAvailability"
 import { useApi } from "@/components/providers/DataProvider"
 import { ContactLink } from "@/lib/types"
 import { cn } from "@/lib/utils"
@@ -45,11 +44,7 @@ function Intro() {
             )}
           >
             <MainHeader className="container z-10 py-4 md:py-8">
-              <Swap
-                firstComponent={<WorkAvailability />}
-                secondComponent={<WeatherComponent />}
-              />
-              {/* <WorkAvailability reverse /> */}
+              <HeaderAd />
             </MainHeader>
           </div>
 

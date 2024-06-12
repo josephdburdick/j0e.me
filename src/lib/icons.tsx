@@ -1,4 +1,5 @@
 import {
+  Ellipsis,
   ExternalLink,
   File,
   Mail,
@@ -54,6 +55,7 @@ const LinkedInSVG = () => (
 )
 
 const icons: IconsMap = {
+  ellipsis: Ellipsis,
   send: Send,
   mail: Mail,
   menu: Menu,

@@ -13,19 +13,28 @@ import {
 } from "@/components/ui/drawer"
 import { ContactLink } from "@/lib/types"
 import { cn } from "@/lib/utils"
+import { PropsWithChildren } from "react"
 
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 import Icon from "./Icon"
 
-type Props = {
+type Props = PropsWithChildren & {
   links: ContactLink[];
+  className?: string;
   title?: string;
   description?: string;
   iconOnly?: boolean;
 };
 
 export default function MainNav(props: Props) {
-  const { iconOnly = false, links: linksProp = [], title, description } = props
+  const {
+    children = null,
+    iconOnly = false,
+    links: linksProp = [],
+    title,
+    description,
+  } = props
+  const hasText = title || description
   const renderTrigger = (
     <Button className="rounded-full" size="lg">
       <span className="flex items-center gap-2">
@@ -40,7 +49,6 @@ export default function MainNav(props: Props) {
       </span>
     </Button>
   )
-
   const Nav = () => (
     <nav>
       <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -68,24 +76,25 @@ export default function MainNav(props: Props) {
       </ul>
     </nav>
   )
-
   return (
     <>
       <div className="hidden md:block">
         <Popover>
-          <PopoverTrigger asChild>{renderTrigger}</PopoverTrigger>
+          <PopoverTrigger asChild>{children || renderTrigger}</PopoverTrigger>
           <PopoverContent side="bottom" align="end" className="w-max space-y-8">
-            <div className="prose dark:prose-invert">
-              <h4>{title}</h4>
-              <p>{description}</p>
-            </div>
+            {hasText && (
+              <div className="prose dark:prose-invert">
+                <h4>{title}</h4>
+                <p>{description}</p>
+              </div>
+            )}
             <Nav />
           </PopoverContent>
         </Popover>
       </div>
       <div className="visible w-full text-center md:hidden">
         <Drawer>
-          <DrawerTrigger asChild>{renderTrigger}</DrawerTrigger>
+          <DrawerTrigger asChild>{children || renderTrigger}</DrawerTrigger>
           <DrawerContent>
             <div className="mx-auto w-full max-w-md">
               <DrawerHeader>
