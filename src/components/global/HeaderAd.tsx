@@ -83,7 +83,12 @@ export default function HeaderAd() {
     >
       <CarouselContent className="h-12">
         <CarouselItem className="flex justify-end pt-3">
-          <MainNav links={links} className="mr-auto">
+          <MainNav
+            links={links}
+            className="mr-auto"
+            title="Let's Connect"
+            description="Send a message via Email or Social Media"
+          >
             <Button
               variant="outline"
               size="sm"
