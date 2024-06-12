@@ -11,10 +11,6 @@ import { cn } from "@/lib/utils"
 export default function Experience() {
   const { data } = useApi()
   const experience: ExperienceType[] = data.experience.attributes.experience
-  const [introBodyText, ...bioBodyText] = data.experience.html
-    .split(/<\/?p>/)
-    .filter((paragraph: string) => paragraph.trim().length > 0)
-
   const renderSkill = (skill: string, key: number) =>
     !!skill ? (
       <li key={key}>

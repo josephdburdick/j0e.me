@@ -39,3 +39,12 @@ export type Experience = {
   visible?: boolean;
   roles: Role[];
 };
+
+export type Recommendation = {
+  name: string;
+  avatar: string;
+  title: string;
+  date: string;
+  relationship: string;
+  body: string;
+};
