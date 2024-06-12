@@ -27,8 +27,8 @@ type Props = {
 export default function MainNav(props: Props) {
   const { iconOnly = false, links: linksProp = [], title, description } = props
   const renderTrigger = (
-    <Button variant="outline" size={"lg"}>
-      <span className="flex items-center gap-2 text-primary">
+    <Button className="rounded-full" size="lg">
+      <span className="flex items-center gap-2">
         {iconOnly ? (
           <Icon.menu />
         ) : (
