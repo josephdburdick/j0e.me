@@ -40,22 +40,10 @@ export async function generateMetadata(): Promise<Metadata> {
 
 async function Head() {
   const { favicon: faviconProp } = await api()
-  const { meta, favicon } = faviconProp.attributes
-
-  const renderFavicons = (favicon.icons || []).map((icon: FavIcon) => (
-    <link key={icon.href} {...icon} />
-  ))
+  const { meta } = faviconProp.attributes
 
   return (
     <NextHead>
-      {renderFavicons}
-      <link
-        rel="mask-icon"
-        href={favicon.maskIcon.href}
-        color={favicon.maskIcon.color}
-      />
-      <link rel="icon" type="image/x-icon" href={favicon.shortcutIcon} />
-      <link rel="manifest" href={favicon.manifest} />
       <meta
         name="msapplication-TileColor"
         content={meta.msapplicationTileColor}
