@@ -31,8 +31,8 @@ export default function Experience() {
         <div className="col-span-12 items-center md:col-start-4">
           <div className="flex gap-2 text-base">
             <span>{role.title}</span>
-            <span>{role.location}</span>
-            <span>{role.type}</span>
+            <span className="hidden md:inline">{role.location}</span>
+            <span className="hidden md:inline">{role.type}</span>
           </div>
         </div>
       </div>
