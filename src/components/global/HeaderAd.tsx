@@ -82,7 +82,7 @@ export default function HeaderAd() {
       onMouseLeave={handleMouseLeave}
     >
       <CarouselContent className="h-12">
-        <CarouselItem className="flex justify-end pt-3">
+        <CarouselItem className="pt-3">
           <MainNav
             links={links}
             className="mr-auto"
@@ -99,7 +99,7 @@ export default function HeaderAd() {
             </Button>
           </MainNav>
         </CarouselItem>
-        <CarouselItem>
+        <CarouselItem className="pl-1">
           <WorkAvailability />
         </CarouselItem>
       </CarouselContent>
