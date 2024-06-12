@@ -33,7 +33,7 @@ const DarkModeToggle = () => {
       <div
         className={cn(
           buttonVariants({ variant: "default", size: "lg" }),
-          "pointer-events-none absolute right-full z-0 mr-2 translate-x-1/4 whitespace-nowrap rounded-full px-4 py-2 opacity-0 transition-all duration-300 group-hover:-translate-x-0 group-hover:opacity-100 group-active:opacity-100",
+          "pointer-events-none absolute right-full z-0 mr-2 translate-x-1/4 whitespace-nowrap rounded-full px-4 py-2 opacity-0 transition-all duration-300 group-hover:-translate-x-0 group-hover:opacity-100",
         )}
       >
         Toggle theme
