@@ -1,14 +1,14 @@
 ---
 experience:
-  - company: "Unqork"
-    location: "New York, New York, United States · Remote"
-    logo: "${basePath}/assets/images/logos/unqork.svg"
+  - company: Unqork
+    location: New York, New York, United States · Remote
+    logo: ${basePath}/assets/images/logos/unqork.svg
     roles:
-      - title: "Senior Software Engineer"
-        type: "Full-time"
-        start_date: "2020-01-01"
-        end_date: null
-        duration: "4 yrs 6 mos"
+      - title: Senior Software Engineer
+        type: Full-time
+        date:
+          start: 2020-01-01
+          end: null
         description: >
           Founding member of the Platform UI team. While living in Argentina in 2019, instrumental in interviewing and recruiting key team members who have significantly contributed to the team's success.
 
@@ -19,17 +19,22 @@ experience:
           Currently part of the Experience Engineering team, working on innovative component creation using the Runtime team's Vega engine. Involved in pioneering efforts to build and refine new methodologies in a dynamic, real-time development environment.
         skills:
           [
-            "React.js",
-            "Communication",
-            "JavaScript",
-            "Node.js",
-            "Web Standards",
+            React,
+            Communication,
+            JavaScript,
+            Node,
+            Fullstack,
+            Web Standards,
+            Design Systems,
+            Recruitment,
+            Module Development,
+            Real-time Development,
           ]
-      - title: "Senior Software Engineer"
-        type: "Contract"
-        start_date: "2018-02-01"
-        end_date: "2020-01-01"
-        duration: "2 yrs"
+      - title: Senior Software Engineer
+        type: Contract
+        date:
+          start: 2018-02-01
+          end: 2020-01-01
         description: >
           Initially joined as an original member of the “Theme Team” before the creation of Unqork Digital Services. Collaborated in a team to develop over 50 custom themes and demos, laying the foundation for future design initiatives.
 
@@ -38,44 +43,51 @@ experience:
           Played a key role in transitioning the Module/App Builder from v1 to v2, with much of my input on design, styles, and behavior still in use today.
         skills:
           [
-            "React.js",
-            "Communication",
-            "JavaScript",
-            "Node.js",
-            "Web Standards",
+            React,
+            Communication,
+            Node,
+            Node,
+            Fullstack,
+            Web Standards,
+            Theme Development,
+            Utility Classes,
+            Module Transition,
           ]
-  - company: "Present Day"
-    logo: "${basePath}/assets/images/logos/presentday.svg"
+  - company: Present Day
+    logo: ${basePath}/assets/images/logos/presentday.svg
     roles:
-      - title: "Principal Engineer"
-        type: "Contract"
-        start_date: "2017-04-01"
-        end_date: "2020-01-01"
-        duration: "2 yrs 10 mos"
-        location: "Greater New York City Area · Remote"
+      - title: Principal Engineer
+        type: Contract
+        date:
+          start: 2017-04-01
+          end: 2020-01-01
+        location: Greater New York City Area · Remote
         description: >
           Actively engaged in every phase of project development, ensuring comprehensive involvement from inception to completion.
 
-          Collaborated with an engineer based in Tokyo to develop a full-stack application for Paraguay's largest testing laboratory.
+           The application featured integration with Wordpress REST API and utilized a server-rendered architecture comprising Node, Express, GraphQL, Apollo, React, and Redux, demonstrating advanced full-stack development capabilities.
 
-          The application featured integration with Wordpress REST API and utilized a server-rendered architecture comprising Node, Express, GraphQL, Apollo, React, and Redux, demonstrating advanced full-stack development capabilities.
         skills:
           [
-            "React.js",
-            "Communication",
-            "JavaScript",
-            "Node.js",
-            "Web Standards",
+            React,
+            Node,
+            JavaScript,
+            Node,
+            Fullstack,
+            Web Standards,
+            Full-stack Development,
+            REST API Integration,
+            Server-rendered Architecture,
           ]
-  - company: "Joey"
+  - company: Joey
     visible: false
-    location: "Brooklyn, New York City · Remote"
+    location: Brooklyn, New York City · Remote
     roles:
-      - title: "UX, Designer and Developer"
-        type: "Self-employed"
-        start_date: "2009-11-01"
-        end_date: "2017-04-01"
-        duration: "7 yrs 6 mos"
+      - title: UX, Designer and Developer
+        type: Self-employed
+        date:
+          start: 2009-11-01
+          end: 2017-04-01
         description: >
           Managed and collaborated with a team of designers and developers, overseeing the creation of digital materials.
 
@@ -88,21 +100,27 @@ experience:
           Contributed to a variety of projects including the production of print and digital materials for annual reports, brochures, advertisements, logos, presentation binders, CD covers, websites, and interactive kiosks.
         skills:
           [
-            "React.js",
-            "Communication",
-            "JavaScript",
-            "Node.js",
-            "Web Standards",
+            Node,
+            Communication,
+            JavaScript,
+            Node,
+            Fullstack,
+            Fullstack,
+            Web Standards,
+            Team Management,
+            Technical Consulting,
+            Email Marketing,
+            Brand Development,
           ]
-  - company: "Adoptive"
-    logo: "${basePath}/assets/images/logos/adoptive.jpg"
-    location: "New York, NY · Remote"
+  - company: Adoptive
+    logo: ${basePath}/assets/images/logos/adoptive.jpg
+    location: New York, NY · Remote
     roles:
-      - title: "Designer/Developer"
-        type: "Full-time"
-        start_date: "2014-03-01"
-        end_date: "2016-08-01"
-        duration: "2 yrs 6 mos"
+      - title: Designer/Developer
+        type: Full-time
+        date:
+          start: 2014-03-01
+          end: 2016-08-01
         description: >
           Actively engaged in the creation and advancement of key technical projects, including YaleMedicine.org and Bundoo.com.
 
@@ -113,16 +131,26 @@ experience:
           My significant contributions to Bundoo were recognized with an honorable mention at the Webby Awards.
 
           Led the deployment of the Yale School of Medicine website, utilizing a tech stack that included Gulp, Webpack, React, and PostCSS, alongside aiding in the integration with .NET back-end technologies.
-        skills: ["React.js", "Communication", "JavaScript", "Web Standards"]
-  - company: "Studiografica"
-    logo: "${basePath}/assets/images/logos/sgc.svg"
-    location: "SoHo, New York City · On-site"
+        skills:
+          [
+            React,
+            Communication,
+            JavaScript,
+            Web Standards,
+            UX Design,
+            Strategic Planning,
+            Development Standards,
+            Award-winning Development,
+          ]
+  - company: Studiografica
+    logo: ${basePath}/assets/images/logos/sgc.svg
+    location: SoHo, New York City · On-site
     roles:
-      - title: "UX, Tech Director, Lead Front-end Designer / Developer"
-        type: "Full-time"
-        start_date: "2011-01-01"
-        end_date: "2013-06-01"
-        duration: "2 yrs 6 mos"
+      - title: UX, Tech Director, Lead Front-end Designer / Developer
+        type: Full-time
+        date:
+          start: 2011-01-01
+          end: 2013-06-01
         description: >
           Oversaw all physical technology resources within the agency.
 
@@ -133,107 +161,168 @@ experience:
           Spearheaded the development of progressive-enhanced front-end solutions.
 
           Worked with high-profile brands such as Ciroc Vodka, Macy’s, Casio, W.W. Glass, and David’s Bridal, as well as the Venture Development Center, contributing significantly to both client-facing and internal projects.
-        skills: ["Communication", "JavaScript", "Web Standards"]
-  - company: "OurWeddingDay / David's Bridal"
-    logo: "${basePath}/assets/images/logos/davids-bridal.svg"
-    location: "Midtown, New York City"
+        skills:
+          [
+            Communication,
+            JavaScript,
+            Web Standards,
+            Technology Management,
+            Recruitment,
+            UI/UX Consultancy,
+            Progressive Enhancement,
+          ]
+  - company: OurWeddingDay / David's Bridal
+    logo: ${basePath}/assets/images/logos/davids-bridal.svg
+    location: Midtown, New York City
     roles:
-      - title: "Senior Designer / Front-end Web Developer"
-        type: "Full-time"
-        start_date: "2008-11-01"
-        end_date: "2011-04-01"
-        duration: "2 yrs 6 mos"
+      - title: Senior Designer / Front-end Web Developer
+        type: Full-time
+        date:
+          start: 2008-11-01
+          end: 2011-04-01
         description: >
           Oversaw the design and development of email blasts, web banner advertisements, and features for web and email, as well as landing pages for one of the largest bridal retail stores in the country and its affiliate site, OurWeddingDay.
 
           Led the redesign of the corporate style guide, the main website, branding elements, the vendor control panel for logged-in users, and various content pages.
 
           Managed the relationship with an outsourced back-end development firm until late 2009. This collaboration continued until the company broadened its focus and created specialized roles for designers and developers.
-        skills: ["Communication", "JavaScript", "Web Standards"]
-  - company: "Aquent"
-    logo: "${basePath}/assets/images/logos/aquent.svg"
+        skills:
+          [
+            Communication,
+            JavaScript,
+            Web Standards,
+            Email Marketing,
+            Corporate Style Guide,
+            Vendor Management,
+          ]
+  - company: Aquent
+    logo: ${basePath}/assets/images/logos/aquent.svg
+    visible: false
     roles:
-      - title: "Designer / Front-end Web Developer"
-        type: "Full-time"
-        start_date: "2007-01-01"
-        end_date: "2008-10-01"
-        duration: "1 yr 10 mos"
-  - company: "TMP Worldwide"
-    logo: "${basePath}/assets/images/logos/tmp.svg"
+      - title: Designer / Front-end Web Developer
+        type: Full-time
+        date:
+          start: 2007-01-01
+          end: 2008-10-01
+  - company: TMP Worldwide
+    logo: ${basePath}/assets/images/logos/tmp.svg
     roles:
-      - title: "Designer"
-        type: "Full-time"
-        start_date: "2008-01-01"
-        end_date: "2008-03-01"
-        duration: "3 mos"
+      - title: Designer
+        type: Full-time
+        date:
+          start: 2008-01-01
+          end: 2008-03-01
         description: >
           Assisted Creative Director and Art Director on an advertising campaign spanning web and print media for the Department of Defense Missile Defense Agency.
-  - company: "National Crime Prevention Council"
-    logo: "${basePath}/assets/images/logos/ncpc.png"
+        skills:
+          [
+            Communication,
+            JavaScript,
+            Web Standards,
+            Advertising Campaigns,
+            Print Media,
+          ]
+  - company: National Crime Prevention Council
+    logo: ${basePath}/assets/images/logos/ncpc.png
+    visible: false
     roles:
-      - title: "Public/Media Relations, Program Associate"
-        type: "Full-time"
-        start_date: "2007-07-01"
-        end_date: "2008-01-01"
-        duration: "7 mos"
+      - title: Public/Media Relations, Program Associate
+        type: Full-time
+        date:
+          start: 2007-07-01
+          end: 2008-01-01
         description: >
           Responsible for all aspects of public/media relations including: leveraging the positive assets of the organization’s brand icon, McGruff the Crime Dog®; foster non-traditional media and advertising opportunities for NCPC and conduct aggressive media outreach for the National Citizens’ Crime Prevention Campaign; assist in the development process of production for television public service announcements; act as liaison between NCPC spokespeople and the mass media including major television networks, newspapers, and magazines; handle daily media inquiries, schedule television and phone interviews; prepare talking points, press releases, and media kits; and help promote NCPC story lines.
-      - title: "Media Assistant"
-        type: "Full-time"
-        start_date: "2004-06-01"
-        end_date: "2006-08-01"
-        duration: "2 yrs 3 mos"
+        skills:
+          [
+            Communication,
+            Media Relations,
+            Public Relations,
+            Media Outreach,
+            Press Releases,
+          ]
+      - title: Media Assistant
+        type: Full-time
+        date:
+          start: 2004-06-01
+          end: 2006-08-01
         description: >
           Maintained a full load of duties working right below the directors of three separate departments and fulfilled work with creativity and diligence. Reorganized and redesigned the Statistic Summary Report system so further maintenance was minimal. Organized email addresses for press releases to thousands of media personnel and other interested individuals/corporations. Critiqued and solved problems of editing source to sites that were maintained by proprietary management systems. Remained as a telecommuting intern developing web design and other freelance work during the school semester.
-  - company: "Fishbowl Marketing"
-    location: "Alexandria, Virginia"
+        skills:
+          [
+            Communication,
+            Media Relations,
+            Public Relations,
+            Report System Design,
+            Email Management,
+          ]
+  - company: Fishbowl Marketing
+    location: Alexandria, Virginia
     roles:
-      - title: "Production Designer"
-        type: "Full-time"
-        start_date: "2008-01-01"
-        end_date: "2008-12-01"
-        duration: "Less than a year"
+      - title: Production Designer
+        type: Full-time
+        date:
+          start: 2008-01-01
+          end: 2008-12-01
         description: >
-          Developed a high number of highly conceptual email campaign templates for restaurants in the United States and Europe.
-  - company: "Virginia Commonwealth University"
-    logo: "${basePath}/assets/images/logos/vcu.svg"
+          Developed a high number of highly conceptual email campaign templates for restaurants in the United States and European markets.
+        skills: [Communication, Email Marketing, Campaign Design]
+  - company: Virginia Commonwealth University
+    logo: ${basePath}/assets/images/logos/vcu.svg
     roles:
-      - title: "Web Host, Master, & Designer"
-        type: "Full-time"
-        start_date: "2006-08-01"
-        end_date: "2007-05-01"
-        duration: "10 mos"
+      - title: Web Host, Master, & Designer
+        type: Full-time
+        date:
+          start: 2006-08-01
+          end: 2007-05-01
         description: >
-          Managed design, development, and hosting for the VCU speaker series website, "Creating and Consuming Culture in the Digital Age". Collaborated with teams from Boing Boing and Wikipedia.
+          Managed design, development, and hosting for the VCU speaker series website, Creating and Consuming Culture in the Digital Age. Collaborated with teams from Boing Boing and Wikipedia.
 
           Played a pivotal role in ensuring the website effectively represented the series' focus on digital technologies' impact on culture, humanities, and arts.
 
           This series was a collaboration between VCU's Department of English, School of Mass Communications, and the School of the Arts.
-      - title: "Art Director"
-        type: "Full-time"
-        start_date: "2006-06-01"
-        end_date: "2007-05-01"
-        duration: "1 yr"
+        skills: [Communication, Web Design, Hosting, Digital Technologies]
+      - title: Art Director
+        type: Full-time
+        date:
+          start: 2006-06-01
+          end: 2007-05-01
         description: >
-          Worked closely with Creative Director Bridget Camden on print concepts for "Creating & Consuming Culture in the Digital Age", a collection of VCU-hosted speaker series.
+          Worked closely with Creative Director Bridget Camden on print concepts for Creating & Consuming Culture in the Digital Age, a collection of VCU-hosted speaker series.
 
           Oversaw the design, copywriting, and production of four posters, prominently displayed on campus, highlighting the series' exploration of digital technology's influence on contemporary culture and the arts.
 
           Coordinated with various departments within VCU to ensure the series' successful representation through visual media.
-  - company: "Independent"
+        skills:
+          [Communication, Art Direction, Print Design, Digital Technologies]
+  - company: Independent
+    visible: false
     roles:
-      - title: "Web Master/Designer"
-        type: "Full-time"
-        start_date: "1999-06-01"
-        end_date: "2006-09-01"
-        duration: "7 yrs 4 mos"
+      - title: Web Master/Designer
+        type: Full-time
+        date:
+          start: 1999-06-01
+          end: 2006-09-01
         description: >
           Designed, implemented, operated, and maintained a major Internet site for several years, with clientele from 45 countries. This volunteer business grew to include four part-time web designers.
-  - company: "Mediaflux"
+        skills: [Web Design, Web Development, Team Management]
+  - company: Mediaflux
+    visible: false
     roles:
-      - title: "Advertising/Design Intern"
-        type: "Full-time"
-        start_date: "2006-01-01"
-        end_date: "2006-12-01"
-        duration: "Less than a year"
+      - title: Advertising/Design Intern
+        type: Full-time
+        date:
+          start: 2006-01-01
+          end: 2006-12-01
+        skills: [Communication, Advertising, Design]
 ---
+
+My career has been an exciting journey through various roles, always with a focus on blending technology and design to deliver top-notch user experiences.
+
+At Unqork, I’ve been a key player since day one, helping to build the Platform UI team and develop the Unqork Design System (UQDS). This system has become a cornerstone of the platform, enhancing its functionality and user experience. I’ve also worked on integrating this system into component settings and pioneering innovative component creation using cutting-edge methodologies.
+
+Before Unqork, I worked at Present Day, where I led full-stack development projects, including a major application for Paraguay’s largest testing laboratory. My work demonstrated my ability to deliver advanced solutions while collaborating across time zones and cultures.
+
+At Adoptive, I played a crucial role in projects like YaleMedicine.org and Bundoo.com, earning an honorable mention at the Webby Awards. My contributions to user experience design and strategic planning were instrumental in these successes.
+
+I’m passionate about communication, mentoring, and driving innovation. Whether it’s through developing robust applications or enhancing user interfaces, I strive to create impactful and enjoyable digital experiences.

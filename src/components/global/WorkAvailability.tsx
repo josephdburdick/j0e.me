@@ -9,7 +9,7 @@ export default function WorkAvailability(props: Props) {
     <div>
       <div
         className={cn(
-          "flex items-center gap-2 text-muted",
+          "flex items-center gap-2 text-foreground dark:text-muted",
           reverse && "flex-row-reverse",
         )}
       >

@@ -17,7 +17,7 @@ export default function ContactLinks(props: Props) {
 
   return (
     <nav className={className}>
-      <ul className="flex gap-4 md:gap-8 flex-col md:flex-row justify-end md:items-center">
+      <ul className="flex flex-col justify-end gap-4 md:flex-row md:items-center md:gap-8">
         {links}
       </ul>
     </nav>

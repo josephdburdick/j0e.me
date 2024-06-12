@@ -1,41 +1,52 @@
 "use client"
-import { useApi } from "@/lib/providers/DataProvider"
+
+import DateSpan from "@/components/global/DateSpan"
+import RuleHeader from "@/components/global/RuleHeader"
+import { useApi } from "@/components/providers/DataProvider"
+import { Badge } from "@/components/ui/badge"
+import convertNewLinesToHTML from "@/lib/convertNewLinesToHTML"
 import { Experience as ExperienceType, Role } from "@/lib/types"
+import { cn } from "@/lib/utils"
 
 export default function Experience() {
   const { data } = useApi()
   const experience: ExperienceType[] = data.experience.attributes.experience
+  const [introBodyText, ...bioBodyText] = data.experience.html
+    .split(/<\/?p>/)
+    .filter((paragraph: string) => paragraph.trim().length > 0)
 
-  const renderDate = (dateProp: string | null) => {
-    if (!dateProp) return "Now"
+  const renderSkill = (skill: string, key: number) =>
+    !!skill ? (
+      <li key={key}>
+        <Badge variant="default">{skill}</Badge>
+      </li>
+    ) : null
 
-    const date = new Date(dateProp)
-    return `
-      ${date.toLocaleString("default", { month: "short" })} 
-      ${date.toLocaleString("default", { year: "numeric" })} 
-
-    `
-  }
   const renderRole = (role: Role, index: number) => (
     <li key={`role-${index}`} className="grid-auto-rows grid gap-4">
       <div className="grid grid-cols-12 items-center">
-        <div className="col-span-12 gap-1 text-xs text-muted md:col-span-3 md:col-start-1 xl:col-span-2">
-          <div className="flex flex-wrap gap-1 lg:justify-start xl:justify-end">
-            <time>{renderDate(role.start_date)}</time>
-            <span>&mdash;</span>
-            <time>{renderDate(role.end_date)}</time>
-          </div>
+        <div className="col-span-12 gap-1 text-sm text-muted md:col-span-3 md:col-start-1 xl:col-span-2">
+          <DateSpan date={role.date} />
         </div>
-        <div className="col-span-12 items-center md:col-span-8 md:col-start-4">
-          <div className="flex gap-2 text-sm">
+        <div className="col-span-12 items-center md:col-start-4">
+          <div className="flex gap-2 text-base">
             <span>{role.title}</span>
+            <span>{role.location}</span>
             <span>{role.type}</span>
           </div>
         </div>
       </div>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 md:col-span-9 md:col-start-4">
-          <p>{role.description}</p>
+        <div className="col-span-12 space-y-4 md:col-span-9 md:col-start-4">
+          <div
+            className="prose dark:prose-invert"
+            dangerouslySetInnerHTML={{
+              __html: convertNewLinesToHTML(role.description),
+            }}
+          ></div>
+          <ul className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            {role?.skills?.sort().map(renderSkill)}
+          </ul>
         </div>
       </div>
     </li>
@@ -44,26 +55,35 @@ export default function Experience() {
     <li key={`experience-${index}`} className="grid gap-4">
       <div className="grid grid-cols-12">
         <div className="col-span-12 font-semibold md:col-span-8 md:col-start-4">
-          {experience.company}
+          <RuleHeader>{experience.company}</RuleHeader>
         </div>
       </div>
-      <ul className="grid-auto-rows grid items-start gap-4">
+      <ul className="grid-auto-rows grid items-start gap-6">
         {experience.roles.map(renderRole)}
       </ul>
     </li>
   )
+
   const renderExperiences = (
     <div className="container">
       <ul className="grid-auto-rows grid gap-10">
-        {experience.filter((item) => !item.visible).map(renderExperience)}{" "}
+        {experience
+          .filter((item) => item.visible !== false)
+          .map(renderExperience)}
       </ul>
     </div>
   )
-  return (
-    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-secondary pt-4 md:pt-8 lg:pt-16 xl:pt-24">
-      {/* <MainHeader />  */}
 
-      <div className="flex w-full flex-1">{renderExperiences}</div>
+  return (
+    <div
+      className={cn(
+        "md:py16 min-h-[100dvh] items-center justify-center space-y-8 bg-secondary py-8 lg:py-24 xl:py-36",
+      )}
+    >
+      <div className="container prose-scale space-y-4">
+        <h4 className="text-xl font-bold">Experience</h4>
+      </div>
+      <div className="mt-8 flex w-full flex-1">{renderExperiences}</div>
     </div>
   )
 }

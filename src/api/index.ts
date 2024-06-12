@@ -1,8 +1,10 @@
-import fs from "fs/promises"
 import fm from "front-matter"
-import path from "path"
+import fs from "fs/promises"
 import { marked } from "marked"
+import path from "path"
+
 import nextConfig from "../../next.config.mjs"
+
 interface FrontMatterAttributes {
   [key: string]: any;
 }

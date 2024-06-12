@@ -1,12 +1,14 @@
 import type { Config } from "tailwindcss"
 import colors from "tailwindcss/colors"
+
 const config = {
-  darkMode: "media",
+  darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./lib/responsiveClasses.tsx",
   ],
   prefix: "",
   theme: {
@@ -41,12 +43,10 @@ const config = {
             },
             h4: {
               fontSize: "clamp(1.25rem, 2vw + 0.75rem, 2rem)",
-              // fontWeight: "normal",
               lineHeight: "1.25",
             },
             h5: {
               fontSize: "clamp(1rem, 1.5vw + 0.5rem, 1.5rem)",
-              // fontWeight: "normal",
               lineHeight: "1.25",
             },
           },
@@ -94,6 +94,10 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -106,6 +110,8 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+
+        fadeIn: "fadeIn 1s ease-in-out",
       },
     },
   },

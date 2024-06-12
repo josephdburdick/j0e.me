@@ -1,13 +1,16 @@
 export type ContactLink = {
   url: string;
   label: string;
+  icon?: string;
 };
 
 export interface Role {
   title: string;
   type: string;
-  start_date: string;
-  end_date: string | null;
+  date: {
+    start: string;
+    end: string | null;
+  };
   duration: string;
   location?: string;
   description: string;
