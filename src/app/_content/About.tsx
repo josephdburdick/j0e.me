@@ -21,9 +21,9 @@ export default function Footer() {
   ]
   return (
     <div className="relative flex flex-col items-center bg-white">
-      <div className="container z-10 items-center lg:absolute lg:flex lg:h-full">
+      <div className="container z-10 mt-8 w-full items-center lg:absolute lg:mt-0 lg:flex lg:h-full">
         <div className="grid gap-4 lg:grid-cols-2">
-          <div className="space-y-2 rounded-3xl p-8 backdrop-blur-md dark:text-black xl:p-16">
+          <div className="space-y-2 rounded-3xl border border-white backdrop-blur-md dark:text-black lg:p-8 xl:p-16">
             <div className="text-sm">About this site</div>
             <p>
               Edited in{" "}
