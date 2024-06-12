@@ -20,18 +20,10 @@ export default function Footer() {
     },
   ]
   return (
-    <div className="flex items-center bg-secondary">
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        className="absolute z-0 aspect-auto"
-      />
-
-      <div className="relative">
-        <div className="grid sm:grid-cols-2">
-          <div className="space-y-2 rounded-3xl p-8 mix-blend-darken backdrop-blur-md md:p-16 lg:p-24 xl:p-36">
+    <div className="relative flex flex-col items-center bg-white">
+      <div className="container z-10 items-center lg:absolute lg:flex lg:h-full">
+        <div className="grid gap-4 lg:grid-cols-2">
+          <div className="space-y-2 rounded-3xl p-8 text-primary backdrop-blur-md xl:p-16">
             <div className="text-sm">About this site</div>
             <p>
               Edited in{" "}
@@ -58,6 +50,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="z-0 aspect-auto"
+      />
     </div>
   )
 }
