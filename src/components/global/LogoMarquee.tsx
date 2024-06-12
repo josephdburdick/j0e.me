@@ -1,6 +1,7 @@
-import { useApi } from "@/lib/providers/DataProvider"
+import { useApi } from "@/components/providers/DataProvider"
 import { Job } from "@/lib/types"
-import { cn } from "@/lib/utils"
+
+import { Card, CardContent } from "../ui/card"
 
 type MarqueeProps = {
   itemWidth?: string;
@@ -14,13 +15,13 @@ export default function LogoMarquee(props: MarqueeProps) {
   )
 
   return (
-    <div className="marquee-wrapper relative w-11/12 max-w-screen-xl mx-auto  h-36 overflow-hidden pointer-events-none">
+    <div className="marquee-wrapper pointer-events-none relative z-10 mx-auto h-36 w-11/12 max-w-screen-xl overflow-hidden">
       {jobs.map((job, index) => (
-        <div
-          className={cn("absolute w-52 h-24 rounded-lg shadow-xl my-4 ")}
+        <Card
+          className="absolute my-4 h-24 w-52 rounded-lg bg-background shadow-xl"
           key={index}
           style={{
-            animationDelay: `calc(30s / 8 * (8 - ${index + 1}) * -1)`,
+            animationDelay: `calc(30s / ${jobs.length} * (${jobs.length} - ${index + 1}) * -1)`,
             animationName: "scrollLeft",
             animationDuration: "30s",
             animationTimingFunction: "linear",
@@ -28,14 +29,14 @@ export default function LogoMarquee(props: MarqueeProps) {
             left: `max(calc(${itemWidth} * ${jobs.length}), 100%)`,
           }}
         >
-          <div className="w-full h-full flex items-center justify-center text-muted p-8 ">
+          <CardContent className="flex h-full w-full items-center justify-center p-8 text-muted">
             <img
               src={job.logo}
               alt={`${job.company} logo`}
-              className="grayscale pointer-events-none selection-none max-h-20 max-w-28"
+              className="selection-none pointer-events-none max-h-20 max-w-28 grayscale dark:invert"
             />
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       ))}
     </div>
   )

@@ -1,9 +1,10 @@
+import { FavIcon } from "@/lib/types"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
-import api from "../api"
 import NextHead from "next/head"
-import { FavIcon } from "@/lib/types"
+
+import api from "../api"
+import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -53,8 +54,8 @@ async function Head() {
         href={favicon.maskIcon.href}
         color={favicon.maskIcon.color}
       />
+      <link rel="icon" type="image/x-icon" href={favicon.shortcutIcon} />
       <link rel="manifest" href={favicon.manifest} />
-      <link rel="shortcut icon" href={favicon.shortcutIcon} />
       <meta
         name="msapplication-TileColor"
         content={meta.msapplicationTileColor}

@@ -1,23 +1,42 @@
 ---
-name: "Joe Burdick"
-title: "Senior Software Engineer"
-location: "Brooklyn, New York"
-born: "1984-06-18"
-email: "josephdburdick@gmail.com"
+name: Joe Burdick
+title: Senior Software Engineer
+location: Brooklyn, New York
+coordinates: [40.7143, 73.9442]
+email: josephdburdick@gmail.com
+picture:
+  src: ${basePath}/assets/images/profile.png
+  width: 96
+  height: 96
+  alt: Joseph Burdick profile picture
 availableForWork: true
+bg:
+  src: ${basePath}/assets/images/bg-beach.jpg
+  width: 6240
+  height: 1799
+  alt: Me at the beach with friends
+
 links:
   email:
-    url: "mailto:josephdburdick@gmail.com"
-    label: "Email"
+    url: mailto:josephdburdick@gmail.com
+    label: Email
+    icon: mail
+  instagram:
+    url: https://instagr.am/d00m.exe
+    label: Instagram
+    icon: instagram
   linkedin:
-    url: "https://linkedin.com/in/josephdburdick"
-    label: "LinkedIn"
+    url: https://linkedin.com/in/josephdburdick
+    label: LinkedIn
+    icon: linkedIn
   readcv:
-    url: "https://read.cv/josephdburdick"
-    label: "Read.cv"
+    url: https://read.cv/josephdburdick
+    label: Read.cv
+    icon: readCV
   github:
-    url: "https://github.com/josephdburdick"
-    label: "Github"
+    url: https://github.com/josephdburdick
+    label: Github
+    icon: github
 intro: >
   j0e.me is the eponymous online home of Joe Burdick— web designer, software engineer, leader, and photographer.
 ---

@@ -1,72 +1,81 @@
 "use client"
 
-import Image from "next/image"
-import { useApi } from "@/lib/providers/DataProvider"
-import WorkAvailability from "@/components/global/WorkAvailability"
-import ContactLinks from "@/components/global/ContactLinks"
+import DarkModeToggle from "@/components/global/DarkModeToggle"
+import Icon from "@/components/global/Icon"
 import LogoMarquee from "@/components/global/LogoMarquee"
+import MainHeader from "@/components/global/MainHeader"
+import MainNav from "@/components/global/MainNav"
+import WeatherComponent from "@/components/global/Weather"
+import WorkAvailability from "@/components/global/WorkAvailability"
+import { useApi } from "@/components/providers/DataProvider"
 import { ContactLink } from "@/lib/types"
-import MobileNav from "@/components/global/MobileNav"
+import { cn } from "@/lib/utils"
+import { useEffect, useRef, useState } from "react"
 
 function Intro() {
+  const headerRef = useRef<HTMLDivElement | null>(null)
   const { data } = useApi()
-  const { logo } = data.site.attributes
-
   const links: ContactLink[] = Object.values(data.profile.attributes.links)
-  const filter = ["Email"]
+  const [isSticky, setIsSticky] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!headerRef.current) return
+      const { bottom } = headerRef.current?.getBoundingClientRect() || {}
+      setIsSticky(bottom < 0)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
-    <div className="flex flex-1 w-full">
-      <div className="grid grid-rows-[auto_1fr_auto] gap-4 lg:gap-6 items-center w-full">
-        <header className="container flex justify-between pt-4 md:pt-8 lg:pt-16 xl:pt-24">
-          <Image
-            src={logo.url}
-            width={logo.width}
-            height={logo.height}
-            alt={logo.alt}
-          />
-          <div className="flex items-center gap-2 text-secondary">
-            <div className="flex items-end md:items-center gap-4 justify-between">
-              <WorkAvailability reverse />
-            </div>
-          </div>
-        </header>
-        <main className="items-center md:space-y-16 space-y-8 w-full">
+    <div className="flex min-h-[95dvh] flex-col items-center justify-center">
+      <div className="flex w-full flex-1">
+        <div className="grid w-full grid-rows-[auto_1fr_auto] items-center gap-4 lg:gap-6">
+          <MainHeader className="pt-8 md:pt-16 lg:pt-24 xl:pt-36">
+            <DarkModeToggle />
+          </MainHeader>
           <div
-            className="container text-heading-md"
-            dangerouslySetInnerHTML={{ __html: data.intro.html }}
-          />
-          <LogoMarquee />
-        </main>
-        <footer className="container pb-4 md:pb-8 lg:pb-16 xl:pb-24">
-          <div className="flex items-end md:items-center gap-4 justify-between">
-            <div className="hidden sm:flex items-center gap-2 text-muted text-sm md:text-base">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              <span>{data.profile.attributes.location}</span>
-            </div>
-            <ContactLinks
-              links={links.filter(({ label }) => !filter.includes(label))}
-              className="hidden md:block"
-            />
-            <MobileNav
-              links={links}
-              className="block md:hidden mx-auto sm:mr-0"
-            />
+            className={cn(
+              "fixed top-0 w-full bg-gradient-to-b from-background mix-blend-normal transition-opacity duration-300 dark:mix-blend-plus-darker",
+              isSticky ? "opacity-100" : "opacity-0",
+            )}
+          >
+            <MainHeader className="container z-10 py-4 md:py-8">
+              <WorkAvailability reverse />
+            </MainHeader>
           </div>
-        </footer>
+
+          <main className="w-full items-center space-y-8 md:space-y-16">
+            <div
+              className="container prose prose-scale dark:prose-invert"
+              dangerouslySetInnerHTML={{ __html: data.intro.html }}
+            />
+            <LogoMarquee />
+          </main>
+          <footer className="pb-8 md:pb-16 lg:pb-24 xl:pb-36">
+            <div className="container">
+              <div
+                className="flex items-center justify-between gap-4"
+                ref={headerRef}
+              >
+                <div className="hidden shrink-0 items-center gap-2 text-sm text-muted md:flex md:text-base">
+                  <Icon.mapPin />
+                  {/* <span>{data.profile.attributes.location}</span> */}
+                  <WeatherComponent />
+                </div>
+                <MainNav
+                  title="Let's Connect"
+                  description="Send a message via Email or Social Media"
+                  links={links}
+                />
+              </div>
+            </div>
+          </footer>
+        </div>
       </div>
     </div>
   )
