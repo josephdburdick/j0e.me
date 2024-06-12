@@ -1,4 +1,5 @@
 import {
+  ExternalLink,
   File,
   Mail,
   MapPin,
@@ -63,6 +64,7 @@ const icons: IconsMap = {
   readCV: File,
   mapPin: MapPin,
   instagram: InstagramSVG,
+  externalLink: ExternalLink,
 }
 
 export default icons

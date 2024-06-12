@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 interface SwapProps {
   firstComponent: React.ReactNode;
@@ -17,6 +17,10 @@ const Swap: React.FC<SwapProps> = ({
   className = "",
 }) => {
   const [showFirst, setShowFirst] = useState(true)
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const firstRef = useRef<HTMLDivElement>(null)
+  const secondRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout
@@ -32,15 +36,46 @@ const Swap: React.FC<SwapProps> = ({
     return () => clearTimeout(intervalId) // Cleanup timeout on component unmount
   }, [firstDuration, secondDuration, showFirst])
 
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (containerRef.current) {
+        const firstHeight = firstRef.current?.offsetHeight || 0
+        const firstWidth = firstRef.current?.offsetWidth || 0
+        const secondHeight = secondRef.current?.offsetHeight || 0
+        const secondWidth = secondRef.current?.offsetWidth || 0
+        setDimensions({
+          width: Math.max(firstWidth, secondWidth),
+          height: Math.max(firstHeight, secondHeight),
+        })
+      }
+    }
+
+    updateDimensions()
+    window.addEventListener("resize", updateDimensions)
+
+    return () => {
+      window.removeEventListener("resize", updateDimensions)
+    }
+  }, [showFirst])
+
   return (
-    <div className={cn("relative h-full overflow-hidden", className)}>
+    <div
+      ref={containerRef}
+      className={cn("relative overflow-hidden", className)}
+      style={{
+        width: `${dimensions.width}px`,
+        height: `${dimensions.height}px`,
+      }}
+    >
       <div
-        className={`absolute transform transition-transform duration-500 ${showFirst ? "translate-y-0" : "-translate-y-full"}`}
+        ref={firstRef}
+        className={`absolute w-full transition-transform duration-500 ${showFirst ? "translate-y-0" : "-translate-y-full"}`}
       >
         {firstComponent}
       </div>
       <div
-        className={`absolute transform transition-transform duration-500 ${showFirst ? "translate-y-full" : "translate-y-0"}`}
+        ref={secondRef}
+        className={`absolute w-full transition-transform duration-500 ${showFirst ? "translate-y-full" : "translate-y-0"}`}
       >
         {secondComponent}
       </div>

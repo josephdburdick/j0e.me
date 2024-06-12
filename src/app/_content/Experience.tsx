@@ -37,7 +37,7 @@ export default function Experience() {
         </div>
       </div>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 space-y-4 md:col-span-9 md:col-start-4">
+        <div className="col-span-12 space-y-2 md:col-span-9 md:col-start-4">
           <div
             className="prose dark:prose-invert"
             dangerouslySetInnerHTML={{
@@ -52,13 +52,13 @@ export default function Experience() {
     </li>
   )
   const renderExperience = (experience: ExperienceType, index: number) => (
-    <li key={`experience-${index}`} className="grid gap-4">
+    <li key={`experience-${index}`} className="grid gap-2">
       <div className="grid grid-cols-12">
         <div className="col-span-12 font-semibold md:col-span-8 md:col-start-4">
           <RuleHeader>{experience.company}</RuleHeader>
         </div>
       </div>
-      <ul className="grid-auto-rows grid items-start gap-6">
+      <ul className="grid-auto-rows grid items-start gap-12">
         {experience.roles.map(renderRole)}
       </ul>
     </li>

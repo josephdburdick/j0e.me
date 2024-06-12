@@ -1,7 +1,8 @@
 ---
 experience:
   - company: Unqork
-    location: New York, New York, United States · Remote
+    location: Union Square, New York City
+    remote: true
     logo: ${basePath}/assets/images/logos/unqork.svg
     roles:
       - title: Senior Software Engineer
@@ -46,7 +47,6 @@ experience:
             React,
             Communication,
             Node,
-            Node,
             Fullstack,
             Web Standards,
             Theme Development,
@@ -60,28 +60,31 @@ experience:
         type: Contract
         date:
           start: 2017-04-01
-          end: 2020-01-01
-        location: Greater New York City Area · Remote
+          end: null
+        location: Bushwick, Brooklyn, New York City
+        remote: true
         description: >
-          Actively engaged in every phase of project development, ensuring comprehensive involvement from inception to completion.
+          Actively engaged in every phase of project development, ensuring comprehensive involvement from inception to completion. Responsible for creating bespoke web applications that consumed external APIs, providing design and UX consultation, and acting as a for-hire engineer for a variety of development needs.
 
-           The application featured integration with Wordpress REST API and utilized a server-rendered architecture comprising Node, Express, GraphQL, Apollo, React, and Redux, demonstrating advanced full-stack development capabilities.
+          Demonstrated advanced full-stack development capabilities through various projects, integrating REST APIs and utilizing server-rendered architectures with technologies such as Node, Express, GraphQL, Apollo, React, and Redux.
 
         skills:
           [
             React,
             Node,
             JavaScript,
-            Node,
-            Fullstack,
             Web Standards,
             Full-stack Development,
             REST API Integration,
             Server-rendered Architecture,
+            UX Consultation,
+            Visual Design,
+            API Design,
           ]
   - company: Joey
     visible: false
-    location: Brooklyn, New York City · Remote
+    location: Bedstuy, Brooklyn, New York City
+    remote: true
     roles:
       - title: UX, Designer and Developer
         type: Self-employed
@@ -105,7 +108,6 @@ experience:
             JavaScript,
             Node,
             Fullstack,
-            Fullstack,
             Web Standards,
             Team Management,
             Technical Consulting,
@@ -114,7 +116,8 @@ experience:
           ]
   - company: Adoptive
     logo: ${basePath}/assets/images/logos/adoptive.jpg
-    location: New York, NY · Remote
+    location: Soho, New York City
+    remote: true
     roles:
       - title: Designer/Developer
         type: Full-time
@@ -134,6 +137,7 @@ experience:
         skills:
           [
             React,
+            .NET,
             Communication,
             JavaScript,
             Web Standards,
@@ -144,7 +148,8 @@ experience:
           ]
   - company: Studiografica
     logo: ${basePath}/assets/images/logos/sgc.svg
-    location: SoHo, New York City · On-site
+    location: SoHo, New York City
+    remote: false
     roles:
       - title: UX, Tech Director, Lead Front-end Designer / Developer
         type: Full-time
@@ -156,7 +161,7 @@ experience:
 
           Recruited, trained, and managed a diverse team of freelancers, both locally and internationally.
 
-          Provided expert consultancy on UI design, UX development, and creating cross-browser/platform compatible experiences.
+          Provided consultancy on UI design, UX development, and creating cross-browser/platform compatible experiences.
 
           Spearheaded the development of progressive-enhanced front-end solutions.
 
@@ -174,8 +179,9 @@ experience:
   - company: OurWeddingDay / David's Bridal
     logo: ${basePath}/assets/images/logos/davids-bridal.svg
     location: Midtown, New York City
+    remote: false
     roles:
-      - title: Senior Designer / Front-end Web Developer
+      - title: Senior Designer / Front-end Web Engineer
         type: Full-time
         date:
           start: 2008-11-01
@@ -197,6 +203,7 @@ experience:
           ]
   - company: Aquent
     logo: ${basePath}/assets/images/logos/aquent.svg
+    location: Washington DC Metro Area
     visible: false
     roles:
       - title: Designer / Front-end Web Developer
@@ -206,6 +213,7 @@ experience:
           end: 2008-10-01
   - company: TMP Worldwide
     logo: ${basePath}/assets/images/logos/tmp.svg
+    location: McLean, Virginia
     roles:
       - title: Designer
         type: Full-time
@@ -224,6 +232,7 @@ experience:
           ]
   - company: National Crime Prevention Council
     logo: ${basePath}/assets/images/logos/ncpc.png
+    location: Downtown, Washington, DC
     visible: false
     roles:
       - title: Public/Media Relations, Program Associate
@@ -257,7 +266,8 @@ experience:
             Email Management,
           ]
   - company: Fishbowl Marketing
-    location: Alexandria, Virginia
+    location: Old Town North, Alexandria, Virginia
+    remote: false
     roles:
       - title: Production Designer
         type: Full-time
@@ -269,6 +279,7 @@ experience:
         skills: [Communication, Email Marketing, Campaign Design]
   - company: Virginia Commonwealth University
     logo: ${basePath}/assets/images/logos/vcu.svg
+    location: Monroe Campus, Richmond, Virginia
     roles:
       - title: Web Host, Master, & Designer
         type: Full-time
@@ -295,26 +306,6 @@ experience:
           Coordinated with various departments within VCU to ensure the series' successful representation through visual media.
         skills:
           [Communication, Art Direction, Print Design, Digital Technologies]
-  - company: Independent
-    visible: false
-    roles:
-      - title: Web Master/Designer
-        type: Full-time
-        date:
-          start: 1999-06-01
-          end: 2006-09-01
-        description: >
-          Designed, implemented, operated, and maintained a major Internet site for several years, with clientele from 45 countries. This volunteer business grew to include four part-time web designers.
-        skills: [Web Design, Web Development, Team Management]
-  - company: Mediaflux
-    visible: false
-    roles:
-      - title: Advertising/Design Intern
-        type: Full-time
-        date:
-          start: 2006-01-01
-          end: 2006-12-01
-        skills: [Communication, Advertising, Design]
 ---
 
 My career has been an exciting journey through various roles, always with a focus on blending technology and design to deliver top-notch user experiences.

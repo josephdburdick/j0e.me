@@ -1,5 +1,6 @@
 "use client"
 
+import Icon from "@/components/global/Icon"
 import { useApi } from "@/components/providers/DataProvider"
 import Image from "next/image"
 
@@ -17,18 +18,22 @@ export default function Footer() {
         className="absolute z-0 aspect-auto"
       />
 
-      <div className="relative text-primary-foreground">
+      <div className="relative">
         <div className="grid sm:grid-cols-2">
-          <div className="space-y-1 p-8 mix-blend-darken backdrop-blur-lg md:p-16 lg:p-24 xl:p-36">
+          <div className="space-y-2 p-8 mix-blend-darken backdrop-blur-lg md:p-16 lg:p-24 xl:p-36">
             <div className="text-sm">About this site</div>
             <p>
-              Built with front-matter, statically generated with Next, and
-              hosted on Github pages.{" "}
+              Data composed in front-matter format, front-end statically
+              generated with Next, server hosted with Github actions.
+            </p>
+            <p>
               <a
+                className="inline-flex items-center gap-2"
                 href="https://github.com/josephdburdick/j0e"
-                className="underline"
               >
-                View Source Code
+                <span className="underline">View Source Code</span>
+
+                <Icon.externalLink className="inline-block" />
               </a>
             </p>
           </div>
