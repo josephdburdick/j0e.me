@@ -26,7 +26,7 @@ export default function DateSpan({ date }: Props) {
   return (
     <div className="flex flex-wrap items-center justify-start gap-2">
       <time>{renderDate(date.start)}</time>
-      <span className="h-px max-w-6 grow border-t border-muted">
+      <span className="h-px max-w-6 grow border-t border-muted-foreground">
         <span className="sr-only">&mdash;</span>
       </span>
       <time>{renderDate(date.end)}</time>

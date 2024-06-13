@@ -4,7 +4,7 @@ experience:
     logo: ${basePath}/assets/images/logos/unqork.svg
     roles:
       - title: Senior Software Engineer L1
-        location: Union Square, New York City
+        location: Manhattan, New York City
         remote: true
         type: Full-time
         date:
@@ -32,6 +32,7 @@ experience:
             Real-time Development,
           ]
       - title: Senior Software Engineer
+        location: Manhattan, New York City
         remote: true
         type: Contract
         date:
@@ -62,7 +63,7 @@ experience:
         date:
           start: 2017-04-01
           end: null
-        location: Bushwick, Brooklyn, New York City
+        location: Brooklyn, New York City
         remote: true
         description: >
           Actively engaged in every phase of project development, ensuring comprehensive involvement from inception to completion. Responsible for creating bespoke web applications that consumed external APIs, providing design and UX consultation, and acting as a for-hire engineer for a variety of development needs.
@@ -150,10 +151,10 @@ experience:
           ]
   - company: Studiografica
     logo: ${basePath}/assets/images/logos/sgc.svg
-    location: SoHo, New York City
     remote: false
     roles:
       - title: UX, Tech Director, Lead Front-end Engineer
+        location: SoHo, New York City
         type: Full-time
         date:
           start: 2011-01-01
@@ -178,7 +179,7 @@ experience:
             UI/UX Consultancy,
             Progressive Enhancement,
           ]
-  - company: OurWeddingDay / David's Bridal
+  - company: David's Bridal
     logo: ${basePath}/assets/images/logos/davids-bridal.svg
     location: Midtown, New York City
     remote: false
@@ -269,11 +270,11 @@ experience:
             Email Management,
           ]
   - company: Fishbowl Marketing
-    location: Alexandria, Virginia
     remote: false
     hidden: true
     roles:
       - title: Production Designer / Engineer
+        location: Alexandria, Virginia
         type: Full-time
         date:
           start: 2008-01-01
