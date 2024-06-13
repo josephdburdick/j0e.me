@@ -32,7 +32,7 @@ function Intro() {
   }, [])
   return (
     <>
-      <div className="flex h-[95dvh] max-h-[2000px] min-h-[800px] flex-col items-center justify-center">
+      <div className="flex h-[95dvh] max-h-[2000px] min-h-[600px] flex-col items-center justify-center">
         <div className="flex w-full flex-1">
           <div className="grid w-full grid-rows-[auto_1fr_auto] items-center gap-4 lg:gap-6">
             <MainHeader className="pt-8 md:pt-16 lg:pt-24 xl:pt-36">
