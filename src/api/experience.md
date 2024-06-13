@@ -1,11 +1,11 @@
 ---
 experience:
   - company: Unqork
-    location: Union Square, New York City
-    remote: true
     logo: ${basePath}/assets/images/logos/unqork.svg
     roles:
-      - title: Senior Software Engineer
+      - title: Senior Software Engineer L1
+        location: Union Square, New York City
+        remote: true
         type: Full-time
         date:
           start: 2020-01-01
@@ -32,6 +32,7 @@ experience:
             Real-time Development,
           ]
       - title: Senior Software Engineer
+        remote: true
         type: Contract
         date:
           start: 2018-02-01
@@ -56,7 +57,7 @@ experience:
   - company: Present Day
     logo: ${basePath}/assets/images/logos/presentday.svg
     roles:
-      - title: Principal Engineer
+      - title: Principal Web Engineer
         type: Contract
         date:
           start: 2017-04-01
@@ -82,12 +83,13 @@ experience:
             API Design,
           ]
   - company: Joey
-    visible: false
-    location: Bedstuy, Brooklyn, New York City
+    disabled: true
     remote: true
     roles:
-      - title: UX, Designer and Developer
+      - title: UX, Designer and Web Engineer
         type: Self-employed
+        location: Bedstuy, Brooklyn, New York City
+        remote: true
         date:
           start: 2009-11-01
           end: 2017-04-01
@@ -116,10 +118,10 @@ experience:
           ]
   - company: Adoptive
     logo: ${basePath}/assets/images/logos/adoptive.jpg
-    location: Soho, New York City
     remote: true
     roles:
-      - title: Designer/Developer
+      - title: UX, Lead Front-end Engineer
+        location: Soho, New York City
         type: Full-time
         date:
           start: 2014-03-01
@@ -151,7 +153,7 @@ experience:
     location: SoHo, New York City
     remote: false
     roles:
-      - title: UX, Tech Director, Lead Front-end Designer / Developer
+      - title: UX, Tech Director, Lead Front-end Engineer
         type: Full-time
         date:
           start: 2011-01-01
@@ -181,7 +183,7 @@ experience:
     location: Midtown, New York City
     remote: false
     roles:
-      - title: Senior Designer / Front-end Web Engineer
+      - title: Senior Designer / Front-end Engineer
         type: Full-time
         date:
           start: 2008-11-01
@@ -203,8 +205,8 @@ experience:
           ]
   - company: Aquent
     logo: ${basePath}/assets/images/logos/aquent.svg
-    location: Washington DC Metro Area
-    visible: false
+    location: Washington DC
+    disabled: true
     roles:
       - title: Designer / Front-end Web Developer
         type: Full-time
@@ -213,6 +215,7 @@ experience:
           end: 2008-10-01
   - company: TMP Worldwide
     logo: ${basePath}/assets/images/logos/tmp.svg
+    disabled: true
     location: McLean, Virginia
     roles:
       - title: Designer
@@ -232,8 +235,8 @@ experience:
           ]
   - company: National Crime Prevention Council
     logo: ${basePath}/assets/images/logos/ncpc.png
-    location: Downtown, Washington, DC
-    visible: false
+    location: Washington, DC
+    disabled: true
     roles:
       - title: Public/Media Relations, Program Associate
         type: Full-time
@@ -266,10 +269,11 @@ experience:
             Email Management,
           ]
   - company: Fishbowl Marketing
-    location: Old Town North, Alexandria, Virginia
+    location: Alexandria, Virginia
     remote: false
+    hidden: true
     roles:
-      - title: Production Designer
+      - title: Production Designer / Engineer
         type: Full-time
         date:
           start: 2008-01-01
@@ -279,10 +283,11 @@ experience:
         skills: [Communication, Email Marketing, Campaign Design]
   - company: Virginia Commonwealth University
     logo: ${basePath}/assets/images/logos/vcu.svg
-    location: Monroe Campus, Richmond, Virginia
     roles:
-      - title: Web Host, Master, & Designer
+      - title: Dev-Ops Engineer, Front-end Designer / Engineer
+        location: Richmond, Virginia
         type: Full-time
+        remote: true
         date:
           start: 2006-08-01
           end: 2007-05-01
@@ -295,6 +300,7 @@ experience:
         skills: [Communication, Web Design, Hosting, Digital Technologies]
       - title: Art Director
         type: Full-time
+        disabled: true
         date:
           start: 2006-06-01
           end: 2007-05-01

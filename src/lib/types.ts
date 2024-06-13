@@ -13,6 +13,7 @@ export interface Role {
   };
   duration: string;
   location?: string;
+  remote?: boolean;
   description: string;
   skills: string[];
 }
@@ -36,6 +37,9 @@ export type Experience = {
   company: string;
   location?: string;
   logo?: string;
-  visible?: boolean;
+  /* Item is permanently disabled */
+  disabled?: boolean;
+  /* Item is initially hidden */
+  hidden?: boolean;
   roles: Role[];
 };
