@@ -65,7 +65,7 @@ export default function MainNav(props: Props) {
                 rel="noreferrer"
                 className={"text-fore flex items-center gap-4 py-4"}
               >
-                <div className="text-muted">
+                <div className="text-muted-foreground">
                   <IconComponent />
                 </div>
                 {label}
