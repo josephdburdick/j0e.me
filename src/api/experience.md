@@ -22,6 +22,7 @@ experience:
           [
             React,
             Communication,
+            Bespoke Framework,
             JavaScript,
             Node,
             Fullstack,
@@ -46,6 +47,7 @@ experience:
           Played a key role in transitioning the Module/App Builder from v1 to v2, with much of my input on design, styles, and behavior still in use today.
         skills:
           [
+            Angular,
             React,
             Communication,
             Node,
