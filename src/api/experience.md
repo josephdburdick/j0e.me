@@ -11,7 +11,7 @@ experience:
           start: 2020-01-01
           end: null
         description: >
-          Founding member of the Platform UI team. While living in Argentina in 2019, instrumental in interviewing and recruiting key team members who have significantly contributed to the team's success.
+          Founding member of the Platform UI team. While working remotely instrumental in interviewing and recruiting key team members who have significantly contributed to the team's success.
 
           Spearheaded the development of the Unqork Design System (UQDS), which now forms a core part of Unqork's platform, enhancing both functionality and user experience.
 
@@ -308,7 +308,7 @@ experience:
           start: 2006-06-01
           end: 2007-05-01
         description: >
-          Worked closely with Creative Director Bridget Camden on print concepts for Creating & Consuming Culture in the Digital Age, a collection of VCU-hosted speaker series.
+          Worked closely with Creative Director on print concepts for Creating & Consuming Culture in the Digital Age, a collection of VCU-hosted speaker series.
 
           Oversaw the design, copywriting, and production of four posters, prominently displayed on campus, highlighting the series' exploration of digital technology's influence on contemporary culture and the arts.
 
