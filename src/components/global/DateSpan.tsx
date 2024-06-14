@@ -7,7 +7,7 @@ type Props = {
 
 export default function DateSpan({ date }: Props) {
   const renderDate = (dateProp: string | null) => {
-    if (!dateProp) return "Now"
+    if (!dateProp) return "Present"
 
     const date = new Date(dateProp)
     const month = date.toLocaleString("default", {
