@@ -121,10 +121,10 @@ experience:
           ]
   - company: Adoptive
     logo: ${basePath}/assets/images/logos/adoptive.jpg
-    remote: true
     roles:
       - title: UX, Lead Front-end Engineer
         location: Soho, New York City
+        remote: true
         type: Full-time
         date:
           start: 2014-03-01
