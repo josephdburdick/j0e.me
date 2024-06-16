@@ -8,11 +8,12 @@ import { forwardRef } from "react"
 
 type Props = PropsWithChildren & {
   className?: string;
+  logoSlot?: ReactNode;
 };
 
 export const MainHeader = forwardRef(
   (props: Props, ref: ForwardedRef<HTMLElement>): ReactNode => {
-    const { className } = props
+    const { logoSlot = null, className } = props
     const { data } = useApi()
     const { name } = data.profile
     const { logo } = data.site.attributes
@@ -26,12 +27,14 @@ export const MainHeader = forwardRef(
         ref={ref}
       >
         <h1 className="dark:invert">
-          <Image
-            src={logo.url}
-            width={logo.width}
-            height={logo.height}
-            alt={logo.alt}
-          />
+          {logoSlot || (
+            <Image
+              src={logo.url}
+              width={logo.width}
+              height={logo.height}
+              alt={logo.alt}
+            />
+          )}
           <span className="sr-only">{name}</span>
         </h1>
         <div className="flex items-center gap-2">
