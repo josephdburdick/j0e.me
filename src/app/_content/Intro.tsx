@@ -69,7 +69,7 @@ function Intro() {
       </div>
       <div
         className={cn(
-          "fixed top-0 w-full bg-gradient-to-b from-background backdrop-blur-sm transition-opacity duration-300 dark:mix-blend-plus-darker dark:backdrop-blur-none",
+          "fixed top-0 w-full bg-gradient-to-b from-background transition-opacity duration-300 dark:mix-blend-plus-darker dark:backdrop-blur-none",
           isSticky ? "opacity-100" : "opacity-0",
         )}
       >

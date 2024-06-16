@@ -85,7 +85,7 @@ export default function Experience() {
     <li
       key={`experience-${experience.company}`}
       id={`experience-${experience.company}`}
-      className="grid gap-2"
+      className="grid gap-2 pt-10"
     >
       <div className="grid grid-cols-12">
         <div className="col-span-12 font-semibold md:col-span-8 md:col-start-4">
@@ -134,7 +134,7 @@ export default function Experience() {
       <div className="container prose-scale space-y-4">
         <h4 className="text-2xl font-light">Experience</h4>
       </div>
-      <div className="mt-8 flex w-full flex-1">{renderExperiences}</div>
+      <div className="flex w-full flex-1">{renderExperiences}</div>
     </div>
   )
 }
