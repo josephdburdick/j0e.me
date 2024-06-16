@@ -11,16 +11,13 @@ import {
 } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
 import convertNewLinesToHTML from "@/lib/convertNewLinesToHTML"
+import toKebabCase from "@/lib/toKebabCase"
 import { Experience as ExperienceType, Role } from "@/lib/types"
 import { cn } from "@/lib/utils"
 
 export default function Experience() {
   const { data } = useApi()
   const experience: ExperienceType[] = data.experience.attributes.experience
-
-  const handleAccordionChange = (value: string) => {
-    console.log(value)
-  }
   const renderSkill = (skill: string, key: number) =>
     !!skill ? (
       <li key={key}>
@@ -32,13 +29,13 @@ export default function Experience() {
     role: Role & { company: ExperienceType["company"] },
     index: number,
   ) => {
-    const key = `${role.company.toLowerCase()}-${index}`
+    const key = `${toKebabCase(role.company)}-${index}`
     return (
       <li className="grid-auto-rows grid gap-4" id={key} key={key}>
         <AccordionItem value={key}>
           <AccordionTrigger>
             <a
-              href={`#experience-${role.company}`}
+              href={`#${toKebabCase(role.company)}`}
               className="grid grid-cols-12 items-center md:flex-1"
             >
               <div className="col-span-12 gap-1 text-xs text-muted-foreground md:col-span-3 md:col-start-1 xl:col-span-2 xl:text-sm">
@@ -83,9 +80,9 @@ export default function Experience() {
 
   const renderExperience = (experience: ExperienceType, key: number) => (
     <li
-      key={`experience-${experience.company}`}
-      id={`experience-${experience.company}`}
-      className="grid gap-2 pt-10"
+      key={`experience-${toKebabCase(experience.company)}`}
+      id={toKebabCase(experience.company)}
+      className="grid gap-2 pt-16 md:pt-10"
     >
       <div className="grid grid-cols-12">
         <div className="col-span-12 font-semibold md:col-span-8 md:col-start-4">
@@ -93,7 +90,6 @@ export default function Experience() {
         </div>
       </div>
       <Accordion
-        onValueChange={handleAccordionChange}
         type="single"
         collapsible
         key={`role-${key}`}
