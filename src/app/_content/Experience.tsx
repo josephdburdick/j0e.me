@@ -17,6 +17,10 @@ import { cn } from "@/lib/utils"
 export default function Experience() {
   const { data } = useApi()
   const experience: ExperienceType[] = data.experience.attributes.experience
+
+  const handleAccordionChange = (value: string) => {
+    console.log(value)
+  }
   const renderSkill = (skill: string, key: number) =>
     !!skill ? (
       <li key={key}>
@@ -30,10 +34,13 @@ export default function Experience() {
   ) => {
     const key = `${role.company.toLowerCase()}-${index}`
     return (
-      <li className="grid-auto-rows grid gap-4" key={key}>
+      <li className="grid-auto-rows grid gap-4" id={key} key={key}>
         <AccordionItem value={key}>
           <AccordionTrigger>
-            <div className="grid grid-cols-12 items-center md:flex-1">
+            <a
+              href={`#experience-${role.company}`}
+              className="grid grid-cols-12 items-center md:flex-1"
+            >
               <div className="col-span-12 gap-1 text-xs text-muted-foreground md:col-span-3 md:col-start-1 xl:col-span-2 xl:text-sm">
                 <DateSpan date={role.date} />
               </div>
@@ -52,7 +59,7 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </AccordionTrigger>
           <AccordionContent>
             <div className="grid grid-cols-12">
@@ -75,13 +82,18 @@ export default function Experience() {
   }
 
   const renderExperience = (experience: ExperienceType, key: number) => (
-    <li key={`experience-${key}`} className="grid gap-2">
+    <li
+      key={`experience-${experience.company}`}
+      id={`experience-${experience.company}`}
+      className="grid gap-2 pt-10"
+    >
       <div className="grid grid-cols-12">
         <div className="col-span-12 font-semibold md:col-span-8 md:col-start-4">
           <RuleHeader>{experience.company}</RuleHeader>
         </div>
       </div>
       <Accordion
+        onValueChange={handleAccordionChange}
         type="single"
         collapsible
         key={`role-${key}`}
@@ -105,7 +117,7 @@ export default function Experience() {
 
   const renderExperiences = (
     <div className="container">
-      <ul className="grid-auto-rows grid gap-14">
+      <ul className="grid-auto-rows grid gap-16">
         {experience
           .filter((item) => item?.disabled !== true)
           .map(renderExperience)}
@@ -122,7 +134,7 @@ export default function Experience() {
       <div className="container prose-scale space-y-4">
         <h4 className="text-2xl font-light">Experience</h4>
       </div>
-      <div className="mt-8 flex w-full flex-1">{renderExperiences}</div>
+      <div className="flex w-full flex-1">{renderExperiences}</div>
     </div>
   )
 }
