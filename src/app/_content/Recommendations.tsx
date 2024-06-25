@@ -7,8 +7,6 @@ import {
   CarouselApi,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
 import convertNewLinesToHTML from "@/lib/convertNewLinesToHTML"
 import { Recommendation as RecommendationType } from "@/lib/types"
@@ -52,7 +50,7 @@ export default function Recommendations() {
     key: number,
   ) => {
     return (
-      <button onClick={() => setCurrent(key)} className="relative">
+      <button key={key} onClick={() => setCurrent(key)} className="relative">
         <div className="overflow-hidden rounded-full">
           <Image
             width={64}
