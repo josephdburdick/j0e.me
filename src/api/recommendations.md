@@ -1,9 +1,30 @@
 ---
 recommendations:
+  - name: Praneeth Moka
+    company: unqork
+    avatar: ${basePath}/assets/images/avatars/praneeth.jpeg
+    title: Staff Engineer at Unqork | Full Stack Development
+    shortTitle: Staff Engineer
+    date: 2024-06-25
+    relationship: Praneeth was senior to Joseph but didn't manage Joseph directly
+    body: >
+      I had the pleasure of working with Joe for over 2 years on various projects. Joe is one of the nicest and hardworking individuals I have ever met. Joe has a very good eye for catching things that can be simplified which often helped our team immensely. Joe has a lot of patience which is a very good asset to have and it was evident in the way he was able to successfully handle long running tasks while also maintaining excellent communication with the team on the progress of the task. He’s always available to help his teammates when they are in need.
+
+      Any team would be lucky to have him and I strongly recommend Joe.
+  - name: Roy V. Sutton
+    company: unqork
+    avatar: ${basePath}/assets/images/avatars/roy.jpeg
+    title: Director of Engineering at Unqork
+    shortTitle: Director of Engineering
+    date: 2024-06-20
+    relationship: Roy V. managed Joseph directly
+    body: >
+      I had the pleasure to manage Joe during my time at Unqork. Joe is someone I consider to be a craftsman. His approach when working with code is to leave the code better than he found it. He has a passion for user interface and for making things right for the users and developers. One notable project Joe worked on was the company's internal design system. As part of his work, Joe assisted teams throughout the platform with getting the most from the system and helping them leverage the components to reduce code and styling. This work greatly improved readability, maintainability and consistency. In addition, Joe is a person I enjoyed working with.
   - name: Travis Hubbard
     company: unqork
     avatar: ${basePath}/assets/images/avatars/travis.jpeg
     title: Staff Engineer | Technical Leadership & Mentorship
+    shortTitle: Staff Engineer
     date: 2024-06-03
     relationship: Travis was senior to Joseph but didn't manage Joseph directly
     body: >
@@ -16,6 +37,7 @@ recommendations:
     company: unqork
     avatar: ${basePath}/assets/images/avatars/eric.jpeg
     title: Engineering Manager + Caregivers ERSG Engagement Co-Chair at Unqork
+    shortTitle: Engineering Manager
     date: 2024-06-03
     relationship: Eric was senior to Joseph but didn't manage Joseph directly
     body: >
@@ -28,6 +50,7 @@ recommendations:
     company: Adoptive
     avatar: ${basePath}/assets/images/avatars/nana.jpeg
     title: Writer | Strategist | Consultant
+    shortTitle: Writer
     date: 2016-07-23
     relationship: Nana T. worked with Joseph but on different teams
     body: >
@@ -36,6 +59,7 @@ recommendations:
     company: studiographica
     avatar: ${basePath}/assets/images/avatars/matt.jpeg
     title: Bootstrap Entrepreneur + Marketing Pro | CEO @ GAME UP® Nutrition | President STAUDT agency | Created/Sold High Rollerz® Jiu Jitsu
+    shortTitle: CEO
     date: 2014-03-06
     relationship: Matt worked with Joseph but they were at different companies
     body: >
@@ -44,6 +68,7 @@ recommendations:
     company: ncpc
     avatar: ${basePath}/assets/images/avatars/todd.jpeg
     title: Strategic Communications Executive | Senior Public Affairs Advisor | Communications Specialist | Vice President of Communications / In-House + Agency → Humanizing integrated strategic communications
+    shortTitle: Communications Executive
     date: 2007-01-24
     relationship: Todd managed Joseph directly
     body: >
