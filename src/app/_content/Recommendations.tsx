@@ -31,12 +31,13 @@ export default function Recommendations() {
   }, [api, current])
   const carouselButtonClassName =
     "relative top-0 left-0 right-0 translate-x-0 translate-y-0"
+
   const renderRecommendation = (
     recommendation: RecommendationType,
     index: number,
   ) => (
     <CarouselItem key={`recommendation-${index}`}>
-      <div className="grid grid-cols-4 items-start gap-8 lg:items-center">
+      <div className="grid grid-cols-4 items-start gap-4 lg:items-center lg:gap-8">
         <div className="col-span-12 flex flex-col justify-between gap-4 text-pretty xl:col-span-1 xl:h-full xl:min-h-60">
           <div className="flex w-full flex-col-reverse items-center justify-start gap-4 sm:flex-row lg:items-start xl:gap-4">
             <div className="shrink-0 overflow-hidden rounded-full">
@@ -59,7 +60,7 @@ export default function Recommendations() {
                 {recommendation.relationship}
               </div>
             </div>
-            <div className="flex items-center gap-2 md:gap-4 lg:hidden">
+            <div className="hidden items-center gap-2 sm:flex md:gap-4 lg:hidden">
               <CarouselPrevious className={carouselButtonClassName} />
               <CarouselNext className={carouselButtonClassName} />
             </div>
@@ -131,14 +132,22 @@ export default function Recommendations() {
     )
   }
 
+  const renderAvatars = (
+    <div className="mt-12 hidden min-h-40 flex-wrap items-start justify-center gap-10 lg:flex">
+      {recommendations.map(renderAvatarButtons)}
+    </div>
+  )
+
   const renderRecommendations = (
     <Carousel setApi={setApi}>
+      <div className="flex items-center justify-center gap-2 sm:hidden md:gap-4 lg:hidden">
+        <CarouselPrevious className={carouselButtonClassName} />
+        <CarouselNext className={carouselButtonClassName} />
+      </div>
+      {renderAvatars}
       <CarouselContent>
         {recommendations.map(renderRecommendation)}
       </CarouselContent>
-      <div className="mt-12 hidden flex-wrap items-center justify-center gap-10 lg:flex">
-        {recommendations.map(renderAvatarButtons)}
-      </div>
     </Carousel>
   )
 
@@ -149,7 +158,7 @@ export default function Recommendations() {
       )}
     >
       <div className="container space-y-4">
-        <header className="space-y-2 pb-12 text-center">
+        <header className="space-y-2 pb-12 text-center lg:pb-0">
           <RuleHeader side="both" className="font-light">
             {data.recommendations.attributes.title}
           </RuleHeader>
