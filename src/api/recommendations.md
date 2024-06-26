@@ -2,7 +2,7 @@
 recommendations:
   - name: Praneeth Moka
     company: unqork
-    avatar: ${basePath}/assets/images/avatars/praneeth.jpeg
+    avatar: ${basePath}/assets/images/avatars/praneeth.webp
     title: Staff Engineer at Unqork | Full Stack Development
     shortTitle: Staff Engineer
     date: 2024-06-25
@@ -13,7 +13,7 @@ recommendations:
       Any team would be lucky to have him and I strongly recommend Joe.
   - name: Roy V. Sutton
     company: unqork
-    avatar: ${basePath}/assets/images/avatars/roy.jpeg
+    avatar: ${basePath}/assets/images/avatars/roy.webp
     title: Director of Engineering at Unqork
     shortTitle: Director of Engineering
     date: 2024-06-20
@@ -22,7 +22,7 @@ recommendations:
       I had the pleasure to manage Joe during my time at Unqork. Joe is someone I consider to be a craftsman. His approach when working with code is to leave the code better than he found it. He has a passion for user interface and for making things right for the users and developers. One notable project Joe worked on was the company's internal design system. As part of his work, Joe assisted teams throughout the platform with getting the most from the system and helping them leverage the components to reduce code and styling. This work greatly improved readability, maintainability and consistency. In addition, Joe is a person I enjoyed working with.
   - name: Travis Hubbard
     company: unqork
-    avatar: ${basePath}/assets/images/avatars/travis.jpeg
+    avatar: ${basePath}/assets/images/avatars/travis.webp
     title: Staff Engineer | Technical Leadership & Mentorship
     shortTitle: Staff Engineer
     date: 2024-06-03
@@ -35,7 +35,7 @@ recommendations:
       I thoroughly enjoyed my time working with Joe, and I believe he would be a brilliant addition to any team.
   - name: Eric Ma
     company: unqork
-    avatar: ${basePath}/assets/images/avatars/eric.jpeg
+    avatar: ${basePath}/assets/images/avatars/eric.webp
     title: Engineering Manager + Caregivers ERSG Engagement Co-Chair at Unqork
     shortTitle: Engineering Manager
     date: 2024-06-03
@@ -48,7 +48,7 @@ recommendations:
       I count myself lucky I had the opportunity to rely on his work and envy whoever gets to work with him in his career.
   - name: Nana T. Baffour-Awuah
     company: Adoptive
-    avatar: ${basePath}/assets/images/avatars/nana.jpeg
+    avatar: ${basePath}/assets/images/avatars/nana.webp
     title: Writer | Strategist | Consultant
     shortTitle: Writer
     date: 2016-07-23
@@ -57,7 +57,7 @@ recommendations:
       Over the two years that I've known Joe, since meeting at Adoptive, I've had the opportunity to work with and get to know one of the most hardworking, creative, resolute and generous people I've met in my career thus far. Joe's work ethic is impeccable, and he is a genuinely generous person who gives of himself to both his work and his team. Joe is an asset--any team would be very lucky to have him!
   - name: Matt Staudt
     company: studiographica
-    avatar: ${basePath}/assets/images/avatars/matt.jpeg
+    avatar: ${basePath}/assets/images/avatars/matt.webp
     title: Bootstrap Entrepreneur + Marketing Pro | CEO @ GAME UP® Nutrition | President STAUDT agency | Created/Sold High Rollerz® Jiu Jitsu
     shortTitle: CEO
     date: 2014-03-06
@@ -66,7 +66,7 @@ recommendations:
       I wanted to take a moment to recommend Joe Burdick. I have worked with Joe not only in his current role as Founder of Joey Labs but also during both of our time at SGC. Having worked with Joe on multiple projects I am extremely confident in his abilities and work ethic which both exceed what I am accustomed to. Joe is my first call when I have a technical question and he has never ceased to amaze me with his insight and can-do attitude. He is extremely knowledgable and is a problem solver. Joe is a rare find, a pleasure to work with and as a result of his expertise and professionalism is an extremely valuable addition to any team.
   - name: Todd Post
     company: ncpc
-    avatar: ${basePath}/assets/images/avatars/todd.jpeg
+    avatar: ${basePath}/assets/images/avatars/todd.webp
     title: Strategic Communications Executive | Senior Public Affairs Advisor | Communications Specialist | Vice President of Communications / In-House + Agency → Humanizing integrated strategic communications
     shortTitle: Communications Executive
     date: 2007-01-24
