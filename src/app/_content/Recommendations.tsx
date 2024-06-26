@@ -81,7 +81,7 @@ export default function Recommendations() {
             <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
           </svg>
           <div
-            className="prose-scale"
+            className="prose-scale text-pretty"
             dangerouslySetInnerHTML={{
               __html: convertNewLinesToHTML(recommendation.body),
             }}
@@ -140,7 +140,7 @@ export default function Recommendations() {
 
   const renderRecommendations = (
     <Carousel setApi={setApi}>
-      <div className="flex items-center justify-center gap-2 sm:hidden md:gap-4 lg:hidden">
+      <div className="flex items-center justify-center gap-2 pb-8 sm:hidden md:gap-4 lg:hidden">
         <CarouselPrevious className={carouselButtonClassName} />
         <CarouselNext className={carouselButtonClassName} />
       </div>
