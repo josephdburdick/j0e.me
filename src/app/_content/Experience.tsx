@@ -127,8 +127,15 @@ export default function Experience() {
         "md:py16 min-h-[800px] items-center justify-center space-y-8 bg-secondary py-8 lg:py-24 xl:py-36",
       )}
     >
-      <div className="container prose-scale space-y-4">
-        <h4 className="text-2xl font-light">Experience</h4>
+      <div className="container space-y-4">
+        <header className="space-y-2 pb-12 text-center">
+          <RuleHeader side="both" className="font-light">
+            {data.experience.attributes.title}
+          </RuleHeader>
+          <h5 className="text-balance text-3xl font-bold">
+            {data.experience.attributes.subtitle}
+          </h5>
+        </header>
       </div>
       <div className="flex w-full flex-1">{renderExperiences}</div>
     </div>

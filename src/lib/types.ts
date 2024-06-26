@@ -48,6 +48,7 @@ export type Recommendation = {
   name: string;
   avatar: string;
   title: string;
+  shortTitle: string;
   date: string;
   relationship: string;
   body: string;
