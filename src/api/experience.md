@@ -1,4 +1,6 @@
 ---
+title: Experience
+subtitle: Showcasing over a decade of expertise and innovation across various roles and industries
 experience:
   - company: Unqork
     logo: ${basePath}/assets/images/logos/unqork.svg
@@ -120,7 +122,8 @@ experience:
             Brand Development,
           ]
   - company: Adoptive
-    logo: ${basePath}/assets/images/logos/adoptive.jpg
+    logo: ${basePath}/assets/images/logos/adoptive.webp
+    remote: true
     roles:
       - title: UX, Lead Front-end Engineer
         location: Soho, New York City
@@ -237,7 +240,7 @@ experience:
             Print Media,
           ]
   - company: National Crime Prevention Council
-    logo: ${basePath}/assets/images/logos/ncpc.png
+    logo: ${basePath}/assets/images/logos/ncpc.webp
     location: Washington, DC
     disabled: true
     roles:

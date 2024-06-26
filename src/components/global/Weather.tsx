@@ -58,7 +58,7 @@ const WeatherComponent: React.FC = () => {
       return `${Math.round(temperature)}º F in`
     } else if (unit === "celsius" && temperature !== null) {
       const celsius = ((temperature - 32) * 5) / 9
-      return `${celsius.toFixed(2)}º C in`
+      return `${celsius.toFixed(1)}º C in`
     } else {
       return ""
     }
