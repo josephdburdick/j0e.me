@@ -66,7 +66,7 @@ recommendations:
   - name: Matt Staudt
     company: studiographica
     avatar: ${basePath}/assets/images/avatars/matt.webp
-    title: Bootstrap Entrepreneur + Marketing Pro | CEO @ GAME UP® Nutrition | President STAUDT agency | Created/Sold High Rollerz® Jiu Jitsu
+    title: Bootstrap Entrepreneur | CEO @ GAME UP® Nutrition | President STAUDT agency
     shortTitle: CEO, Serial Entrepreneur
     date: 2014-03-06
     relationship: Matt worked with Joe but they were at different companies

@@ -38,8 +38,19 @@ export default function Recommendations() {
   ) => (
     <CarouselItem key={`recommendation-${index}`}>
       <div className="grid grid-cols-4 items-start gap-4 lg:items-center lg:gap-8">
-        <div className="col-span-12 flex flex-col justify-between gap-4 text-pretty xl:col-span-1 xl:h-full xl:min-h-60">
-          <div className="flex w-full flex-col-reverse items-center justify-start gap-4 sm:flex-row lg:items-start xl:gap-4">
+        <div className="col-start-2 hidden grid-cols-3 xl:grid">
+          <svg
+            className="mb-4 hidden h-8 w-8 text-gray-400 dark:text-gray-600 lg:block"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 18 14"
+          >
+            <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+          </svg>
+        </div>
+        <div className="col-span-12 flex flex-col justify-between gap-4 text-pretty xl:col-span-1 xl:col-start-1 xl:h-full xl:min-h-60 xl:pt-1">
+          <div className="flex w-full flex-col-reverse items-center justify-center gap-4 sm:flex-row lg:items-start xl:justify-start xl:gap-4">
             <div className="shrink-0 overflow-hidden rounded-full">
               <Image
                 width={64}
@@ -56,7 +67,7 @@ export default function Recommendations() {
                 {recommendation.title}
               </small>
               <div className="text-bold flex items-center gap-1 pt-2 text-xs text-muted-foreground lg:hidden">
-                <Icon.badgeInfo className="shrink-0 text-lime-500" size={16} />{" "}
+                <Icon.badgeInfo className="shrink-0 text-lime-500" size={16} />
                 {recommendation.relationship}
               </div>
             </div>
@@ -70,16 +81,7 @@ export default function Recommendations() {
             {recommendation.relationship}
           </div>
         </div>
-        <div className="col-span-12 xl:col-span-3">
-          <svg
-            className="mb-4 hidden h-8 w-8 text-gray-400 dark:text-gray-600 lg:block"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 18 14"
-          >
-            <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-          </svg>
+        <div className="col-span-12 xl:col-span-3 xl:col-start-2">
           <div
             className="prose-scale text-pretty"
             dangerouslySetInnerHTML={{
