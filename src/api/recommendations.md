@@ -71,7 +71,7 @@ recommendations:
     date: 2014-03-06
     relationship: Matt worked with Joe but they were at different companies
     body: >
-      I wanted to take a moment to recommend Joe Burdick. I have worked with Joe not only in his current role as Founder of Joey Labs but also during both of our time at SGC. Having worked with Joe on multiple projects I am extremely confident in his abilities and work ethic which both exceed what I am accustomed to. Joe is my first call when I have a technical question and he has never ceased to amaze me with his insight and can-do attitude. He is extremely knowledgable and is a problem solver. Joe is a rare find, a pleasure to work with and as a result of his expertise and professionalism is an extremely valuable addition to any team.
+      Having worked with Joe on multiple projects I am extremely confident in his abilities and work ethic which both exceed what I am accustomed to. Joe is my first call when I have a technical question and he has never ceased to amaze me with his insight and can-do attitude. He is extremely knowledgable and is a problem solver. Joe is a rare find, a pleasure to work with and as a result of his expertise and professionalism is an extremely valuable addition to any team.
   - name: Todd Post
     company: ncpc
     avatar: ${basePath}/assets/images/avatars/todd.webp
