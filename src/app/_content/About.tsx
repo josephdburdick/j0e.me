@@ -24,8 +24,8 @@ export default function Footer() {
       <div className="border-lime-2200 relative mx-auto h-10 w-10 border-t-4 border-double"></div>
       <div className="container z-10 mt-8 w-full items-center lg:absolute lg:mt-0 lg:flex lg:h-full">
         <div className="grid gap-4 lg:grid-cols-2">
-          <div className="space-y-2 rounded-3xl backdrop-blur-md dark:text-black lg:p-8 xl:p-16">
-            <div className="text-sm">About this site</div>
+          <div className="space-y-2 rounded-3xl text-sm backdrop-blur-md dark:text-black lg:p-8 xl:p-16">
+            <header className="font-semibold">About this site</header>
             <p>
               Edited in{" "}
               <ExternalLink href="https://neovim.io">Neovim</ExternalLink>,
