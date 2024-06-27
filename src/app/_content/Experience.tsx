@@ -1,5 +1,11 @@
 "use client"
 
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleItem,
+  CollapsibleTrigger,
+} from "@/components/global/Collapsible"
 import DateSpan from "@/components/global/DateSpan"
 import RuleHeader from "@/components/global/RuleHeader"
 import { useApi } from "@/components/providers/DataProvider"
@@ -10,14 +16,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import convertNewLinesToHTML from "@/lib/convertNewLinesToHTML"
 import toKebabCase from "@/lib/toKebabCase"
 import { Experience as ExperienceType, Role } from "@/lib/types"
 import { cn } from "@/lib/utils"
+import { useState } from "react"
 
 export default function Experience() {
   const { data } = useApi()
   const experience: ExperienceType[] = data.experience.attributes.experience
+  const [viewAllToggle, setViewAllToggle] = useState(false)
   const renderSkill = (skill: string, key: number) =>
     !!skill ? (
       <li key={key}>
@@ -113,10 +122,36 @@ export default function Experience() {
 
   const renderExperiences = (
     <div className="container">
-      <ul className="grid-auto-rows grid gap-16">
+      <ul className="grid-auto-rows mx-auto grid gap-16">
         {experience
           .filter((item) => item?.disabled !== true)
+          .slice(0, 3)
           .map(renderExperience)}
+        {experience.length > 3 && (
+          <Collapsible
+            type="single"
+            collapsible
+            onValueChange={(value: string) => setViewAllToggle(!!value)}
+          >
+            <CollapsibleItem value="expand">
+              <CollapsibleContent>
+                <ul className="grid-auto-rows grid gap-16">
+                  {experience
+                    .filter((item) => item?.disabled !== true)
+                    .slice(3)
+                    .map(renderExperience)}
+                </ul>
+              </CollapsibleContent>
+              <CollapsibleTrigger>
+                <RuleHeader side="both">
+                  <span className="rounded-full border bg-primary px-4 py-2 text-xs text-primary-foreground">
+                    {viewAllToggle ? "View Less" : "View All"} Experience
+                  </span>
+                </RuleHeader>
+              </CollapsibleTrigger>
+            </CollapsibleItem>
+          </Collapsible>
+        )}
       </ul>
     </div>
   )
@@ -137,7 +172,11 @@ export default function Experience() {
           </h5>
         </header>
       </div>
-      <div className="flex w-full flex-1">{renderExperiences}</div>
+      <div className="flex w-full flex-1">
+        <ul className="grid-auto-rows mx-auto grid gap-16">
+          {renderExperiences}
+        </ul>
+      </div>
     </section>
   )
 }
