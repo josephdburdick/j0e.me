@@ -52,8 +52,8 @@ export default function Recommendations() {
           </svg>
         </div>
         <div className="col-span-12 flex flex-col justify-between gap-4 text-pretty xl:col-span-1 xl:col-start-1 xl:h-full xl:min-h-60 xl:pt-1">
-          <div className="flex w-full flex-col-reverse items-start justify-center gap-4 sm:flex-row xl:justify-start xl:gap-4">
-            <div className="shrink-0 overflow-hidden rounded-full">
+          <div className="flex w-full items-start justify-center gap-4 xl:justify-start xl:gap-4">
+            <div className="flex shrink-0 overflow-hidden rounded-full">
               <Image
                 width={64}
                 height={64}
@@ -138,7 +138,10 @@ export default function Recommendations() {
   )
 
   const renderRecommendations = (
-    <Carousel setApi={setApi}>
+    <Carousel
+      setApi={setApi}
+      opts={{ startIndex: Math.floor(recommendations.length / 2), loop: true }}
+    >
       <div className="flex items-center justify-center gap-2 pb-8 sm:hidden md:gap-4 lg:hidden">
         <CarouselPrevious className={carouselButtonClassName} />
         <CarouselNext className={carouselButtonClassName} />
