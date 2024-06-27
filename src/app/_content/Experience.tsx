@@ -145,7 +145,7 @@ export default function Experience() {
               <CollapsibleTrigger>
                 <RuleHeader side="both">
                   <span className="rounded-full border bg-primary px-4 py-2 text-xs text-primary-foreground">
-                    {viewAllToggle ? "View Less" : "View All"} Experience
+                    {viewAllToggle ? "View Less" : "View More"} Experience
                   </span>
                 </RuleHeader>
               </CollapsibleTrigger>
