@@ -18,7 +18,6 @@ import { cn } from "@/lib/utils"
 export default function Experience() {
   const { data } = useApi()
   const experience: ExperienceType[] = data.experience.attributes.experience
-  const getCompanyId = (company: string) => company.replace
   const renderSkill = (skill: string, key: number) =>
     !!skill ? (
       <li key={key}>
