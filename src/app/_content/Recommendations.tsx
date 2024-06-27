@@ -37,10 +37,10 @@ export default function Recommendations() {
     index: number,
   ) => (
     <CarouselItem key={`recommendation-${index}`}>
-      <div className="grid grid-cols-4 items-start gap-4 lg:items-center lg:gap-8">
+      <div className="grid grid-cols-4 items-start gap-4 lg:gap-8">
         <div className="col-start-2 hidden grid-cols-3 xl:grid">
           <svg
-            className="mb-4 hidden h-8 w-8 text-gray-400 dark:text-gray-600 lg:block"
+            className="hidden h-8 w-8 text-gray-400 dark:text-gray-600 lg:block"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -50,7 +50,7 @@ export default function Recommendations() {
           </svg>
         </div>
         <div className="col-span-12 flex flex-col justify-between gap-4 text-pretty xl:col-span-1 xl:col-start-1 xl:h-full xl:min-h-60 xl:pt-1">
-          <div className="flex w-full flex-col-reverse items-center justify-center gap-4 sm:flex-row lg:items-start xl:justify-start xl:gap-4">
+          <div className="flex w-full flex-col-reverse items-start justify-center gap-4 sm:flex-row xl:justify-start xl:gap-4">
             <div className="shrink-0 overflow-hidden rounded-full">
               <Image
                 width={64}
@@ -66,7 +66,7 @@ export default function Recommendations() {
               <small className="text-xs text-muted-foreground lg:text-sm">
                 {recommendation.title}
               </small>
-              <div className="text-bold flex items-center gap-1 pt-2 text-xs text-muted-foreground lg:hidden">
+              <div className="text-bold flex items-start gap-1 pt-2 text-xs text-muted-foreground">
                 <Icon.badgeInfo className="shrink-0 text-lime-500" size={16} />
                 {recommendation.relationship}
               </div>
@@ -75,10 +75,6 @@ export default function Recommendations() {
               <CarouselPrevious className={carouselButtonClassName} />
               <CarouselNext className={carouselButtonClassName} />
             </div>
-          </div>
-          <div className="text-bold hidden items-center gap-2 pb-1 text-xs text-muted-foreground lg:flex">
-            <Icon.badgeInfo className="shrink-0 text-lime-500" />{" "}
-            {recommendation.relationship}
           </div>
         </div>
         <div className="col-span-12 xl:col-span-3 xl:col-start-2">
@@ -106,9 +102,8 @@ export default function Recommendations() {
         <div
           className={cn(
             "pointer-events-none shrink-0 overflow-hidden rounded-full shadow-none transition-all",
-            key !== current && "-z-10 grayscale",
-            key === current &&
-              "z-10 shadow-2xl ring-2 ring-primary ring-offset-2",
+            key !== current && "grayscale",
+            key === current && "shadow-2xl ring-2 ring-primary ring-offset-2",
           )}
         >
           <Image
@@ -120,11 +115,11 @@ export default function Recommendations() {
         </div>
         <div
           className={cn(
-            "absolute left-1/2 hidden -translate-x-1/2 flex-col whitespace-nowrap rounded-lg p-2 text-xs shadow-none transition-all lg:flex",
+            "absolute left-1/2 hidden -translate-x-1/2 flex-col whitespace-nowrap rounded-lg p-2 text-xs shadow-none transition-all duration-200 lg:flex",
             key === current &&
               "top-full translate-y-2 bg-primary text-center text-primary-foreground shadow-2xl",
             key !== current &&
-              "top-1/2 -z-20 -translate-y-1/2 rotate-45 bg-secondary text-start blur-sm filter",
+              "top-1/2 -z-20 -translate-y-1/2 rotate-45 bg-secondary text-start blur-[2px]",
           )}
         >
           <span className="font-bold">{recommendation.name}</span>

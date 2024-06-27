@@ -5,10 +5,10 @@ recommendations:
   - name: Praneeth Moka
     company: unqork
     avatar: ${basePath}/assets/images/avatars/praneeth.webp
-    title: Staff Engineer at Unqork | Full Stack Development
+    title: Staff Engineer at Unqork
     shortTitle: Staff Engineer
     date: 2024-06-25
-    relationship: Praneeth was senior to Joe but didn't manage Joe directly
+    relationship: Was senior to Joe but didn't manage Joe directly
     body: >
       I had the pleasure of working with Joe for over 2 years on various projects. Joe is one of the nicest and hardworking individuals I have ever met. Joe has a very good eye for catching things that can be simplified which often helped our team immensely. 
 
@@ -21,7 +21,7 @@ recommendations:
     title: Director of Engineering at Unqork
     shortTitle: Director of Engineering
     date: 2024-06-20
-    relationship: Roy V. managed Joe directly
+    relationship: Managed Joe directly
     body: >
       I had the pleasure to manage Joe during my time at Unqork. Joe is someone I consider to be a craftsman. His approach when working with code is to leave the code better than he found it. He has a passion for user interface and for making things right for the users and developers. 
 
@@ -32,7 +32,7 @@ recommendations:
     title: Staff Engineer | Technical Leadership & Mentorship
     shortTitle: Staff Engineer
     date: 2024-06-03
-    relationship: Travis was senior to Joe but didn't manage Joe directly
+    relationship: Was senior to Joe but didn't manage Joe directly
     body: >
       I had the pleasure of working with Joe at Unqork, and he is a fantastic engineer with a remarkable eye for UI/UX and accessibility. Joe excels at asking insightful questions and raising important considerations, helping teams break down work and fully understand requirements. His deeply analytical mindset enables him to solve business challenges in a holistic and effective manner.
 
@@ -45,7 +45,7 @@ recommendations:
     title: Engineering Manager + Caregivers ERSG Engagement Co-Chair at Unqork
     shortTitle: Engineering Manager
     date: 2024-06-03
-    relationship: Eric was senior to Joe but didn't manage Joe directly
+    relationship: Was senior to Joe but didn't manage Joe directly
     body: >
       Joe epitomizes the qualities of what like to call a responsible engineer. It's one thing to be good at writing code (which Joe is) and it's another to go the extra mile.
 
@@ -58,7 +58,7 @@ recommendations:
     title: Writer | Strategist | Consultant
     shortTitle: Writer
     date: 2016-07-23
-    relationship: Nana T. worked with Joe but on different teams
+    relationship: Worked with Joe but on different teams
     body: >
       Over the two years that I've known Joe, since meeting at Adoptive, I've had the opportunity to work with and get to know one of the most hardworking, creative, resolute and generous people I've met in my career thus far. Joe's work ethic is impeccable, and he is a genuinely generous person who gives of himself to both his work and his team. 
 
@@ -69,7 +69,7 @@ recommendations:
     title: Bootstrap Entrepreneur | CEO @ GAME UP® Nutrition | President STAUDT agency
     shortTitle: CEO, Serial Entrepreneur
     date: 2014-03-06
-    relationship: Matt worked with Joe but they were at different companies
+    relationship: Worked with Joe but they were at different companies
     body: >
       Having worked with Joe on multiple projects I am extremely confident in his abilities and work ethic which both exceed what I am accustomed to. Joe is my first call when I have a technical question and he has never ceased to amaze me with his insight and can-do attitude. He is extremely knowledgable and is a problem solver. Joe is a rare find, a pleasure to work with and as a result of his expertise and professionalism is an extremely valuable addition to any team.
   - name: Todd Post
@@ -78,7 +78,7 @@ recommendations:
     title: Strategic Communications Executive | Senior Public Affairs Advisor
     shortTitle: Communications Executive
     date: 2007-01-24
-    relationship: Todd managed Joe directly
+    relationship: Managed Joe directly
     body: >
       Joe's creativity and attention to detail coupled with his great attitude and sense of humor made him a valuable asset to the department, especially when it came to graphic design, web page management, and other technical skills.
 ---
