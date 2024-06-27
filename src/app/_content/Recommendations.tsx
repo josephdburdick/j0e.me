@@ -109,8 +109,8 @@ export default function Recommendations() {
           )}
         >
           <Image
-            width={64}
-            height={64}
+            width={76}
+            height={76}
             src={recommendation.avatar}
             alt={`${recommendation.name} avatar image`}
           />
