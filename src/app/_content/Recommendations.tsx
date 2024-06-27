@@ -18,11 +18,13 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 export default function Recommendations() {
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
   const { data } = useApi()
+  const [api, setApi] = useState<CarouselApi>()
   const recommendations: RecommendationType[] =
     data.recommendations.attributes.recommendations
+  const [current, setCurrent] = useState(
+    Math.floor(recommendations.length / 2),
+  )
 
   useEffect(() => {
     if (!api) return
