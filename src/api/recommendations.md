@@ -47,7 +47,7 @@ recommendations:
     date: 2024-06-03
     relationship: Was senior to Joe but didn't manage Joe directly
     body: >
-      Joe epitomizes the qualities of what like to call a responsible engineer. It's one thing to be good at writing code (which Joe is) and it's another to go the extra mile.
+      Joe epitomizes the qualities of what I like to call a responsible engineer. It's one thing to be good at writing code (which Joe is) and it's another to go the extra mile.
 
       He just doesn't do the work that he's assigned to do. Joe makes sure to understand the why. This is how you get output from an engineering team that is high quality, that catches edge cases, and that truly solves the problems presenting your users, by having an engineer like Joe asking the right questions and leading by example.
 
