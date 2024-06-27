@@ -149,7 +149,7 @@ export default function Recommendations() {
   )
 
   return (
-    <div
+    <section
       className={cn(
         "md:py16 items-center justify-center space-y-8 bg-gradient-to-b from-secondary py-8 lg:py-24 xl:py-36",
       )}
@@ -165,6 +165,6 @@ export default function Recommendations() {
         </header>
         {renderRecommendations}
       </div>
-    </div>
+    </section>
   )
 }

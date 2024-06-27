@@ -32,7 +32,7 @@ function Intro() {
   }, [])
   return (
     <>
-      <div className="flex h-[85dvh] max-h-[2000px] min-h-[600px] flex-col items-center justify-center">
+      <section className="flex h-[85dvh] max-h-[2000px] min-h-[600px] flex-col items-center justify-center">
         <div className="flex w-full flex-1">
           <div className="grid w-full grid-rows-[auto_1fr_auto] items-center gap-4 lg:gap-6">
             <MainHeader className="pt-8 md:pt-16 lg:pt-24 xl:pt-36">
@@ -66,7 +66,7 @@ function Intro() {
             </footer>
           </div>
         </div>
-      </div>
+      </section>
       <div
         className={cn(
           "fixed top-0 w-full bg-gradient-to-b from-background transition-opacity duration-300 dark:mix-blend-plus-darker dark:backdrop-blur-none",

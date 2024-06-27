@@ -123,7 +123,7 @@ export default function Experience() {
   )
 
   return (
-    <div
+    <section
       className={cn(
         "md:py16 min-h-[800px] items-center justify-center space-y-8 bg-secondary py-8 lg:py-24 xl:py-36",
       )}
@@ -139,6 +139,6 @@ export default function Experience() {
         </header>
       </div>
       <div className="flex w-full flex-1">{renderExperiences}</div>
-    </div>
+    </section>
   )
 }
